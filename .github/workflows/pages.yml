@@ -1,34 +1,20 @@
-name: Deploy Catracada Preview to GitHub Pages
+name: Validate Catracada Pages & Theme Structure
 
 on:
   push:
     branches: ["main", "master"]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  validate:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Verify GitHub Pages index.html and Shopify OS 2.0 files
+        run: |
+          test -f index.html
+          test -f .nojekyll
+          test -f layout/theme.liquid
+          test -f templates/index.json
+          echo "Catracada GitHub Pages & Shopify OS 2.0 files verified successfully!"
