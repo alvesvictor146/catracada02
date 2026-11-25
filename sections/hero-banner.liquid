@@ -1,0 +1,116 @@
+{%- comment -%}
+  Section: hero-banner.liquid
+  Diretriz Atualizada do Cliente:
+  - Esquerda do Hero limpa: apenas o título de impacto "POTÊNCIA MÁXIMA, FORÇA E VITALIDADE EXTREMA" (sem os itens circulados)
+  - Direita do Hero: Carrossel interativo com os 4 itens anunciados à direita do Hero:
+    1. Vídeo Oficial: CATRACADA — PODER EM CÁPSULAS (DESTAQUE OFICIAL)
+    2. 01 • VIGOR & ENERGIA — CATRACADA TEST
+    3. 02 • POWER BLEND — BLACK DRAGON TEST
+    4. 03 • FORÇA EXTREMA — CATRACADA TURBO
+{%- endcomment -%}
+
+<section class="hero-banner" aria-label="Destaque Principal Catracada">
+  <div class="hero-banner__video-bg" aria-hidden="true">
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      src="{{ section.settings.video_url | default: 'Produto_em_destaque_com_tempestade_3a642322_1080p.mp4' | asset_url }}"
+    ></video>
+  </div>
+  <div class="hero-banner__overlay" aria-hidden="true"></div>
+
+  <div class="container hero-banner__grid">
+    <!-- Coluna Esquerda: Apenas o Título de Impacto (itens circulados removidos) -->
+    <div class="hero-banner__content">
+      <h1 class="hero-banner__title" style="margin-bottom: 0;">
+        POTÊNCIA MÁXIMA, <span>FORÇA</span> E <span>VITALIDADE</span> EXTREMA
+      </h1>
+    </div>
+
+    <!-- Coluna Direita: Carrossel com os 4 Itens Anunciados -->
+    <div class="hero-carousel" data-hero-carousel aria-label="Carrossel de Destaques do Hero">
+      <div class="hero-carousel__viewport">
+        <button type="button" class="hero-carousel__arrow hero-carousel__arrow--prev" data-hero-prev aria-label="Slide anterior">&lsaquo;</button>
+        <button type="button" class="hero-carousel__arrow hero-carousel__arrow--next" data-hero-next aria-label="Próximo slide">&rsaquo;</button>
+
+        <!-- Posição 1 (antigo 2): BLACK DRAGON TEST -->
+        <div class="hero-carousel__slide is-active" data-hero-slide>
+          <div class="hero-product-slide">
+            <div class="hero-product-slide__img-box">
+              <img class="hero-product-slide__img" src="{{ 'WhatsApp Image 2026-11-24 at 20.13.23.jpeg' | asset_url }}" alt="BLACK DRAGON TEST" width="180" height="180">
+            </div>
+            <div class="hero-product-slide__content">
+              <span class="hero-product-slide__tag">01 • POWER BLEND</span>
+              <h2 class="hero-product-slide__title">BLACK DRAGON TEST</h2>
+              <p class="hero-product-slide__meta">90 Tabletes • Tribulus + Maca Power • 90% Saponins</p>
+              <a href="#produtos" class="btn btn--primary">VER OFERTA ABAIXO</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Posição 2 (antigo 3): CATRACADA TURBO -->
+        <div class="hero-carousel__slide" data-hero-slide>
+          <div class="hero-product-slide">
+            <div class="hero-product-slide__img-box">
+              <img class="hero-product-slide__img" src="{{ 'WhatsApp Image 2026-11-24 at 20.09.45.jpeg' | asset_url }}" alt="CATRACADA TURBO" width="180" height="180">
+            </div>
+            <div class="hero-product-slide__content">
+              <span class="hero-product-slide__tag">02 • FORÇA EXTREMA</span>
+              <h2 class="hero-product-slide__title">CATRACADA TURBO</h2>
+              <p class="hero-product-slide__meta">60 Cápsulas • Fenogreco 300mg, Beta-Alanina, Boro &amp; Cafeína</p>
+              <a href="#produtos" class="btn btn--primary">VER OFERTA ABAIXO</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Posição 3 (antigo 1): CATRACADA TEST (Vídeo do Frasco Azul) -->
+        <div class="hero-carousel__slide" data-hero-slide>
+          <div class="hero-product-slide">
+            <div class="hero-product-slide__img-box hero-product-slide__img-box--dark">
+              <video
+                class="hero-product-slide__video"
+                autoplay
+                muted
+                loop
+                playsinline
+                disablepictureinpicture
+                preload="metadata"
+                src="{{ section.settings.video_url | default: 'Produto_em_destaque_com_tempestade_3a642322_1080p.mp4' | asset_url }}"
+              ></video>
+            </div>
+            <div class="hero-product-slide__content">
+              <span class="hero-product-slide__tag">03 • VIGOR &amp; ENERGIA</span>
+              <h2 class="hero-product-slide__title">CATRACADA TEST</h2>
+              <p class="hero-product-slide__meta">60 Cápsulas • Complexo B, Zinco, Magnésio, Arginina &amp; Taurina</p>
+              <a href="#produtos" class="btn btn--primary">VER OFERTA ABAIXO</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra de Seleção Rápida dos 3 Produtos do Carrossel do Hero -->
+      <div class="hero-carousel__dots" role="tablist" aria-label="Selecionar item do Hero">
+        <button type="button" class="hero-carousel__dot is-active" data-hero-dot aria-selected="true">1. BLACK DRAGON TEST</button>
+        <button type="button" class="hero-carousel__dot" data-hero-dot aria-selected="false">2. CATRACADA TURBO</button>
+        <button type="button" class="hero-carousel__dot" data-hero-dot aria-selected="false">3. CATRACADA TEST</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero + Carrossel 4 Itens",
+  "settings": [
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "Arquivo de Vídeo do Hero (em assets/)",
+      "default": "Produto_em_destaque_com_tempestade_3a642322_1080p.mp4"
+    }
+  ]
+}
+{% endschema %}

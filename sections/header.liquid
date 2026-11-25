@@ -1,0 +1,133 @@
+<header class="site-header" role="banner">
+  <div class="container site-header__inner">
+    <!-- Logo Oficial Catracada -->
+    <a href="{{ routes.root_url | default: '/' }}" class="site-header__logo" aria-label="{{ shop.name | default: 'Catracada | Natural Zone' }}">
+      {%- if section.settings.logo != blank -%}
+        <img
+          class="site-header__logo-img"
+          src="{{ section.settings.logo | image_url: width: 320 }}"
+          alt="{{ shop.name | default: 'Catracada' | escape }}"
+          width="160"
+          height="46"
+        >
+      {%- else -%}
+        <img
+          class="site-header__logo-img"
+          src="{{ 'Catracada_LOGO.png' | asset_url }}"
+          alt="Catracada | Natural Zone"
+          width="160"
+          height="46"
+          onerror="this.style.display='none'"
+        >
+      {%- endif -%}
+    </a>
+
+    <!-- Menu Principal Determinado pelo Cliente -->
+    <nav class="site-nav" data-site-nav role="navigation" aria-label="Menu Principal">
+      <!-- 1. NOSSOS PRODUTOS (Com as 6 subcategorias obrigatórias) -->
+      <div class="site-nav__item">
+        <a href="#produtos" class="site-nav__link">
+          NOSSOS PRODUTOS
+          {% render 'icon', icon: 'chevron-down' %}
+        </a>
+        <div class="site-nav__dropdown" role="menu" aria-label="Categorias de Nossos Produtos">
+          <a href="{{ routes.collections_url | default: '/collections' }}/estimulantes" class="site-nav__dropdown-link" role="menuitem">
+            <span>ESTIMULANTES</span>
+            {% render 'icon', icon: 'chevron-right' %}
+          </a>
+          <a href="{{ routes.collections_url | default: '/collections' }}/creatinas" class="site-nav__dropdown-link" role="menuitem">
+            <span>CREATINAS</span>
+            {% render 'icon', icon: 'chevron-right' %}
+          </a>
+          <a href="{{ routes.collections_url | default: '/collections' }}/pre-treino" class="site-nav__dropdown-link" role="menuitem">
+            <span>PRÉ TREINO</span>
+            {% render 'icon', icon: 'chevron-right' %}
+          </a>
+          <a href="{{ routes.collections_url | default: '/collections' }}/emagrecedores" class="site-nav__dropdown-link" role="menuitem">
+            <span>EMAGRECEDORES</span>
+            {% render 'icon', icon: 'chevron-right' %}
+          </a>
+          <a href="{{ routes.collections_url | default: '/collections' }}/termogenicos" class="site-nav__dropdown-link" role="menuitem">
+            <span>TERMOGÊNICOS</span>
+            {% render 'icon', icon: 'chevron-right' %}
+          </a>
+          <a href="{{ routes.collections_url | default: '/collections' }}/queda-capilar" class="site-nav__dropdown-link" role="menuitem">
+            <span>QUEDA CAPILAR</span>
+            {% render 'icon', icon: 'chevron-right' %}
+          </a>
+        </div>
+      </div>
+
+      <!-- 2. COMBOS -->
+      <div class="site-nav__item">
+        <a href="{{ routes.collections_url | default: '/collections' }}/combos" class="site-nav__link">
+          COMBOS
+        </a>
+      </div>
+
+      <!-- 3. QUEM SOMOS -->
+      <div class="site-nav__item">
+        <a href="#quem-somos" class="site-nav__link">
+          QUEM SOMOS
+        </a>
+      </div>
+
+      <!-- 4. LOCALIZAÇÃO -->
+      <div class="site-nav__item">
+        <a href="#localizacao" class="site-nav__link">
+          LOCALIZAÇÃO
+        </a>
+      </div>
+
+      <!-- 5. CONTATO -->
+      <div class="site-nav__item">
+        <a href="#contato" class="site-nav__link">
+          CONTATO
+        </a>
+      </div>
+    </nav>
+
+    <!-- Ações Direitas: Carrinho Ajax + Menu Mobile -->
+    <div class="site-header__actions">
+      <a
+        href="{{ routes.cart_url | default: '/cart' }}"
+        class="header-action-btn"
+        data-cart-open
+        aria-label="Abrir Carrinho"
+      >
+        {% render 'icon', icon: 'cart' %}
+        <span>CARRINHO</span>
+        <span class="cart-count-badge" data-cart-count>{{ cart.item_count | default: 0 }}</span>
+      </a>
+
+      <button
+        type="button"
+        class="header-action-btn mobile-menu-toggle"
+        data-mobile-menu-toggle
+        aria-expanded="false"
+        aria-label="{{ 'general.accessibility.menu' | t }}"
+      >
+        {% render 'icon', icon: 'menu' %}
+      </button>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Cabeçalho Principal",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo da Loja (Catracada_LOGO.png)"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu de Navegação Shopify (Opcional)",
+      "default": "main-menu"
+    }
+  ]
+}
+{% endschema %}

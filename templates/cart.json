@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "settings": {}
+    },
+    "diferenciais": {
+      "type": "diferenciais",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "diferenciais"
+  ]
+}

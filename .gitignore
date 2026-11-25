@@ -1,0 +1,25 @@
+# Shopify Theme & Node.js .gitignore
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment & Credentials (NEVER COMMIT)
+.env
+.env.*
+*.pem
+*.key
+.shopify/
+config/settings_data.development.json
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local media / raw design archives (keep only optimized theme assets in assets/)
+*.zip

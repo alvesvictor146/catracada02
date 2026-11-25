@@ -1,0 +1,40 @@
+{
+  "general": {
+    "accessibility": {
+      "skip_to_text": "Pular para o conteúdo principal",
+      "close": "Fechar",
+      "menu": "Abrir menu de navegação"
+    },
+    "search": {
+      "placeholder": "Buscar suplementos, combos, pré-treino...",
+      "submit": "Buscar",
+      "no_results": "Nenhum produto encontrado para sua busca."
+    },
+    "breadcrumbs": {
+      "home": "Início"
+    }
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "COMPRAR AGORA",
+      "adding": "ADICIONANDO...",
+      "added": "ADICIONADO!",
+      "sold_out": "ESGOTADO",
+      "unavailable": "INDISPONÍVEL",
+      "pix_discount_label": "10% OFF NO PIX",
+      "installments_label": "em até 3x sem juros",
+      "quantity": "Quantidade"
+    }
+  },
+  "sections": {
+    "cart": {
+      "title": "Seu Carrinho",
+      "empty": "Seu carrinho está vazio.",
+      "continue_shopping": "Explorar Produtos",
+      "subtotal": "Subtotal",
+      "pix_note": "Garanta 10% OFF pagando via PIX no checkout",
+      "checkout": "FINALIZAR COMPRA SEGURA",
+      "remove": "Remover item"
+    }
+  }
+}

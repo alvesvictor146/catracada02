@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "hero_banner": {
+      "type": "hero-banner",
+      "settings": {
+        "eyebrow": "LINHA OFICIAL CATRACADA & NATURAL ZONE",
+        "subtitle": "Fórmulas concentradas de alta performance para energia, vigor físico, foco e resultados reais. Compre agora com 10% OFF no PIX e envio em até 24h para São Paulo e Região.",
+        "cta_primary_text": "COMPRAR PRODUTOS AGORA",
+        "video_url": "Produto_em_destaque_com_tempestade_3a642322_1080p.mp4"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {}
+    },
+    "diferenciais": {
+      "type": "diferenciais",
+      "settings": {}
+    },
+    "category_grid": {
+      "type": "category-grid",
+      "settings": {}
+    },
+    "brand_story": {
+      "type": "brand-story",
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero_banner",
+    "featured_collection",
+    "diferenciais",
+    "category_grid",
+    "brand_story"
+  ]
+}

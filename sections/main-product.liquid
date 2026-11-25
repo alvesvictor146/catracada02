@@ -1,0 +1,99 @@
+{% render 'breadcrumbs' %}
+
+<section class="main-product-section container" style="padding: 2.5rem 1.25rem 4rem;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: start;">
+    <div style="background: #FFFFFF; border-radius: var(--radius-md); border: 2px solid var(--color-accent-red); padding: 2rem; display: flex; align-items: center; justify-content: center;">
+      {%- if product.featured_image -%}
+        <img
+          src="{{ product.featured_image | image_url: width: 800 }}"
+          alt="{{ product.title | escape }}"
+          width="600"
+          height="600"
+          style="max-height: 460px; object-fit: contain;"
+        >
+      {%- else -%}
+        <img src="{{ 'OIG.png' | asset_url }}" alt="{{ product.title | escape }}" width="400" height="400">
+      {%- endif -%}
+    </div>
+
+    <div style="background: var(--color-bg-card); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: 2rem;">
+      <span class="section-eyebrow">{{ product.vendor | default: 'CATRACADA / NATURAL ZONE' }}</span>
+      <h1 class="section-title" style="margin-bottom: 1rem;">{{ product.title }}</h1>
+
+      {% render 'price', product: product %}
+
+      <form
+        method="post"
+        action="{{ routes.cart_add_url | default: '/cart/add' }}"
+        data-ajax-cart-form
+        data-product-title="{{ product.title | escape }}"
+        data-product-price="{{ product.price }}"
+        style="margin: 1.5rem 0;"
+      >
+        {%- unless product.has_only_default_variant -%}
+          <div style="margin-bottom: 1rem;">
+            <label for="ProductSelect-{{ section.id }}" style="display:block; font-weight:700; margin-bottom:0.4rem;">Opção / Kit:</label>
+            <select
+              name="id"
+              id="ProductSelect-{{ section.id }}"
+              style="width:100%; padding:0.8rem; background:var(--color-bg-primary); border:1px solid var(--color-border-red); border-radius:var(--radius-sm); color:#FFFFFF;"
+            >
+              {%- for variant in product.variants -%}
+                <option
+                  value="{{ variant.id }}"
+                  {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
+                  {% unless variant.available %}disabled="disabled"{% endunless %}
+                >
+                  {{ variant.title }} - {{ variant.price | money }}
+                </option>
+              {%- endfor -%}
+            </select>
+          </div>
+        {%- else -%}
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+        {%- endunless -%}
+
+        <div style="display:flex; gap:0.75rem; margin-bottom: 1rem;">
+          <input
+            type="number"
+            name="quantity"
+            value="1"
+            min="1"
+            aria-label="Quantidade"
+            style="width: 80px; text-align:center; background:var(--color-bg-primary); border:1px solid var(--color-border-subtle); border-radius:var(--radius-sm); font-weight:800;"
+          >
+          <button
+            type="submit"
+            class="btn btn--primary btn--full"
+            {% unless product.available %}disabled{% endunless %}
+          >
+            {% render 'icon', icon: 'cart' %}
+            {%- if product.available -%}COMPRAR AGORA{%- else -%}ESGOTADO{%- endif -%}
+          </button>
+        </div>
+      </form>
+
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when '@app' -%}
+            {% render block %}
+        {%- endcase -%}
+      {%- endfor -%}
+
+      <div style="border-top: 1px solid var(--color-border-subtle); padding-top: 1.25rem; color: var(--color-text-secondary); font-size: 0.95rem;">
+        {{ product.description }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Produto Principal",
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ]
+}
+{% endschema %}

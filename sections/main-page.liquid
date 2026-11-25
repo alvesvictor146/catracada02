@@ -1,0 +1,15 @@
+{% render 'breadcrumbs' %}
+
+<section class="main-page-section container" style="padding: 2.5rem 1.25rem 4rem; max-width: 900px;">
+  <h1 class="section-title" style="margin-bottom: 1.5rem;">{{ page.title }}</h1>
+  <div style="background: var(--color-bg-card); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: 2rem; color: var(--color-text-secondary);">
+    {{ page.content }}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Página Institucional",
+  "settings": []
+}
+{% endschema %}

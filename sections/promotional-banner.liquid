@@ -1,0 +1,42 @@
+<section class="promotional-banner container" style="padding: 2rem 1.25rem;">
+  <div style="background: linear-gradient(135deg, #13203B 0%, #580D16 100%); border: 1px solid var(--color-accent-red); border-radius: var(--radius-md); padding: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;">
+    <div>
+      <span class="section-eyebrow">{{ section.settings.tag | default: 'OFERTA ESPECIAL' }}</span>
+      <h2 class="section-title" style="font-size: 1.65rem;">{{ section.settings.heading | default: 'COMBOS CATRACADA COM 10% OFF NO PIX' }}</h2>
+    </div>
+    <a href="{{ section.settings.link | default: '/collections/combos' }}" class="btn btn--primary">
+      {{ section.settings.btn_text | default: 'APROVEITAR COMBOS' }}
+    </a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Banner Promocional",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tag",
+      "label": "Selo",
+      "default": "OFERTA ESPECIAL"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Título",
+      "default": "COMBOS CATRACADA COM 10% OFF NO PIX"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link do Botão"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Texto do Botão",
+      "default": "APROVEITAR COMBOS"
+    }
+  ]
+}
+{% endschema %}

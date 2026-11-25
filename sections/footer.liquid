@@ -1,0 +1,141 @@
+{%- comment -%}
+  Section: footer.liquid
+  Diretrizes do Cliente:
+  - Adicionar botões das redes sociais (Instagram @naturalzone.br, TikTok @naturalzonebr, Avaliação Google Loja 01)
+  - Mapa do Google no rodapé com localização (Estrada Dom João Nery, 1843 - Vila Silva Teles, São Paulo - SP)
+  - Contato oficial e nota sobre * * Entrega Garantida
+{%- endcomment -%}
+
+<footer id="contato" class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="site-footer__top-grid">
+      <!-- Coluna 1: Marca + Botões de Redes Sociais -->
+      <div>
+        <a href="{{ routes.root_url | default: '/' }}" class="site-header__logo">
+          <img
+            class="site-header__logo-img"
+            src="{{ 'Catracada_LOGO.png' | asset_url }}"
+            alt="Catracada | Natural Zone"
+            width="160"
+            height="46"
+            loading="lazy"
+          >
+        </a>
+        <p class="footer-brand__desc">
+          <strong>Natural Zone Produtos Naturais e Suplementos</strong> — A casa oficial da linha <strong>Catracada</strong>. Suplementos de alta performance com envio rápido para todo o Brasil e retirada em loja física.
+        </p>
+
+        <h3 class="footer-col__title">REDES SOCIAIS &amp; AVALIAÇÕES</h3>
+        <div class="social-buttons-list">
+          <a
+            href="{{ settings.social_instagram_link | default: 'https://www.instagram.com/naturalzone.br' }}"
+            class="social-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {% render 'icon', icon: 'instagram' %}
+            <span>INSTAGRAM • @naturalzone.br (26K)</span>
+          </a>
+
+          <a
+            href="{{ settings.social_tiktok_link | default: 'https://www.tiktok.com/@naturalzonebr' }}"
+            class="social-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {% render 'icon', icon: 'tiktok' %}
+            <span>TIKTOK • @naturalzonebr</span>
+          </a>
+
+          <a
+            href="{{ settings.google_review_link | default: 'https://g.page/r/CbuLKDucytYzEAE/review' }}"
+            class="social-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {% render 'icon', icon: 'google' %}
+            <span>AVALIE A LOJA 01 NO GOOGLE</span>
+          </a>
+
+          <a
+            href="https://wa.me/{{ settings.whatsapp_number | default: '5511985538439' }}"
+            class="social-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {% render 'icon', icon: 'whatsapp' %}
+            <span>WHATSAPP • {{ settings.whatsapp_display | default: '(11) 98553-8439' }}</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Coluna 2: Navegação & Categorias -->
+      <div>
+        <h3 class="footer-col__title">NOSSOS PRODUTOS</h3>
+        <ul class="footer-links-list" style="margin-bottom: 1.75rem;">
+          <li><a href="{{ routes.collections_url | default: '/collections' }}/estimulantes">{% render 'icon', icon: 'chevron-right' %} Estimulantes</a></li>
+          <li><a href="{{ routes.collections_url | default: '/collections' }}/creatinas">{% render 'icon', icon: 'chevron-right' %} Creatinas</a></li>
+          <li><a href="{{ routes.collections_url | default: '/collections' }}/pre-treino">{% render 'icon', icon: 'chevron-right' %} Pré Treino</a></li>
+          <li><a href="{{ routes.collections_url | default: '/collections' }}/emagrecedores">{% render 'icon', icon: 'chevron-right' %} Emagrecedores</a></li>
+          <li><a href="{{ routes.collections_url | default: '/collections' }}/termogenicos">{% render 'icon', icon: 'chevron-right' %} Termogênicos</a></li>
+          <li><a href="{{ routes.collections_url | default: '/collections' }}/queda-capilar">{% render 'icon', icon: 'chevron-right' %} Queda Capilar</a></li>
+          <li><a href="{{ routes.collections_url | default: '/collections' }}/combos">{% render 'icon', icon: 'chevron-right' %} Combos Promocionais</a></li>
+        </ul>
+
+        <h3 class="footer-col__title">ATENDIMENTO</h3>
+        <ul class="footer-links-list">
+          <li><a href="#quem-somos">Quem Somos</a></li>
+          <li><a href="#localizacao">Localização da Loja Física</a></li>
+          <li><a href="mailto:{{ settings.contact_email | default: 'naturalzoneprodutosnaturais@gmail.com' }}">{{ settings.contact_email | default: 'naturalzoneprodutosnaturais@gmail.com' }}</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3: Localização + Mapa do Google no Rodapé -->
+      <div id="localizacao" class="footer-map-col">
+        <h3 class="footer-col__title">LOCALIZAÇÃO — LOJA FÍSICA 01</h3>
+        <div class="footer-map-card">
+          <div class="footer-map-card__address">
+            {% render 'icon', icon: 'map-pin' %}
+            <div>
+              <strong>Natural Zone Produtos Naturais e Suplementos - Loja 01</strong><br>
+              {{ settings.store_address | default: 'Estrada Dom João Nery, 1843 - Vila Silva Teles, São Paulo - SP, CEP: 08452-340' }}
+            </div>
+          </div>
+
+          <div class="footer-map-card__iframe-wrap">
+            <iframe
+              title="Mapa de Localização Natural Zone - Loja 01"
+              src="{{ settings.google_maps_embed_url | default: 'https://www.google.com/maps?q=Estrada+Dom+Jo%C3%A3o+Nery,+1843+-+Vila+Silva+Teles,+S%C3%A3o+Paulo+-+SP,+08452-340&output=embed' }}"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Estrada+Dom+Jo%C3%A3o+Nery,+1843+-+Vila+Silva+Teles,+S%C3%A3o+Paulo+-+SP,+08452-340"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--outline btn--full"
+            style="padding: 0.65rem 1rem; font-size: 0.78rem;"
+          >
+            {% render 'icon', icon: 'map-pin' %}
+            ABRIR ROTA NO GOOGLE MAPS
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>&copy; {{ 'now' | date: '%Y' }} <strong>Catracada / Natural Zone Produtos Naturais e Suplementos</strong>. Todos os direitos reservados.</p>
+      <p>* * Entrega Garantida ou o Dinheiro de Volta conforme política oficial de envios e rastreamento da loja.</p>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Rodapé com Mapa e Redes",
+  "settings": []
+}
+{% endschema %}

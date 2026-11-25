@@ -1,0 +1,55 @@
+<div class="announcement-bar" role="region" aria-label="Destaques Comerciais">
+  <div class="container announcement-bar__inner">
+    <span class="announcement-bar__item">
+      {% render 'icon', icon: 'bolt' %}
+      {{ section.settings.text_1 | default: '10% OFF NO PIX' }}
+    </span>
+    <span class="announcement-bar__sep" aria-hidden="true">|</span>
+    <span class="announcement-bar__item">
+      {% render 'icon', icon: 'credit-card' %}
+      {{ section.settings.text_2 | default: 'PARCELAS EM ATÉ 3X SEM JUROS' }}
+    </span>
+    <span class="announcement-bar__sep" aria-hidden="true">|</span>
+    <span class="announcement-bar__item">
+      {% render 'icon', icon: 'truck' %}
+      {{ section.settings.text_3 | default: 'ENVIOS EM ATÉ 24H PARA SÃO PAULO E REGIÃO' }}
+    </span>
+    <span class="announcement-bar__sep" aria-hidden="true">|</span>
+    <span class="announcement-bar__item">
+      {% render 'icon', icon: 'store' %}
+      {{ section.settings.text_4 | default: 'RETIRADA EM LOJA FÍSICA' }}
+    </span>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Barra de Anúncio",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text_1",
+      "label": "Destaque 1",
+      "default": "10% OFF NO PIX"
+    },
+    {
+      "type": "text",
+      "id": "text_2",
+      "label": "Destaque 2",
+      "default": "PARCELAS EM ATÉ 3X SEM JUROS"
+    },
+    {
+      "type": "text",
+      "id": "text_3",
+      "label": "Destaque 3",
+      "default": "ENVIOS EM ATÉ 24H PARA SÃO PAULO E REGIÃO"
+    },
+    {
+      "type": "text",
+      "id": "text_4",
+      "label": "Destaque 4",
+      "default": "RETIRADA EM LOJA FÍSICA"
+    }
+  ]
+}
+{% endschema %}

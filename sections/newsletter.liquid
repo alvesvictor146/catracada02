@@ -1,0 +1,18 @@
+<section class="newsletter-section container" style="padding: 2.5rem 1.25rem;">
+  <div style="background: var(--color-bg-card); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: 2rem; text-align: center;">
+    <h2 class="section-title" style="font-size: 1.4rem; margin-bottom: 0.5rem;">RECEBA OFERTAS <span>EXCLUSIVAS</span></h2>
+    {% form 'customer' %}
+      <div style="max-width: 480px; margin: 1rem auto 0; display: flex; gap: 0.5rem;">
+        <input type="email" name="contact[email]" placeholder="Seu melhor e-mail" required style="flex:1; padding: 0.75rem 1rem; background: var(--color-bg-primary); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-sm); color: #FFFFFF;">
+        <button type="submit" class="btn btn--primary">CADASTRAR</button>
+      </div>
+    {% endform %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Newsletter",
+  "settings": []
+}
+{% endschema %}

@@ -1,0 +1,172 @@
+{%- comment -%}
+  Section: featured-collection.liquid
+  Diretriz do Cliente:
+  - Posicionado logo após o Hero para compra imediata
+  - PRODUTOS PARA CARROSSEL:
+    1. CATRACADA TEST
+    2. BLACK DRAGON TEST
+    3. CATRACADA TURBO
+{%- endcomment -%}
+
+<section id="produtos" class="featured-carousel-section" aria-label="Produtos em Destaque para Compra">
+  <div class="container">
+    <div class="carousel-toolbar">
+      <div class="section-header">
+        <span class="section-eyebrow">
+          {% render 'icon', icon: 'bolt' %}
+          COMPRA RÁPIDA • PRONTA ENTREGA
+        </span>
+        <h2 class="section-title">
+          DESTAQUES <span>CATRACADA</span>
+        </h2>
+        <p class="section-subtitle">
+          Escolha seu suplemento de alta performance com <strong>10% OFF no PIX</strong> ou em até <strong>3x sem juros</strong>.
+        </p>
+      </div>
+
+      <div class="carousel-nav-buttons">
+        <button type="button" class="carousel-btn" data-carousel-prev aria-label="Produto anterior">
+          {% render 'icon', icon: 'chevron-left' %}
+        </button>
+        <button type="button" class="carousel-btn" data-carousel-next aria-label="Próximo produto">
+          {% render 'icon', icon: 'chevron-right' %}
+        </button>
+      </div>
+    </div>
+
+    <div class="product-carousel-track" data-carousel-track>
+      {%- if section.settings.product_list != blank and section.settings.product_list.count > 0 -%}
+        {%- for product in section.settings.product_list -%}
+          {% render 'product-card', product: product %}
+        {%- endfor -%}
+      {%- else -%}
+        <!-- 1. CATRACADA TEST -->
+        {% render 'product-card',
+          product: all_products['catracada-test'],
+          fallback_title: 'CATRACADA TEST',
+          category_label: 'ESTIMULANTE & VIGOR MASCULINO',
+          badge_text: 'MAIS VENDIDO',
+          fallback_desc: '60 Cápsulas (34g). Fórmula concentrada com Vitaminas B3 e B6, Magnésio, Zinco, L-Arginina, Taurina e Saponinas para máxima disposição e vigor.',
+          fallback_price: 7990,
+          fallback_compare: 9990,
+          fallback_image: 'OIG.png'
+        %}
+
+        <!-- 2. BLACK DRAGON TEST -->
+        {% render 'product-card',
+          product: all_products['black-dragon-test'],
+          fallback_title: 'BLACK DRAGON TEST',
+          category_label: 'POWER BLEND • 90% SAPONINS',
+          badge_text: 'FÓRMULA AVANÇADA',
+          fallback_desc: '90 Tabletes (1.1g por tablete). Black Dragon Labs com Tribulus Terrestris, Maca Peruana Power Blend, Fenogreco e Arginina.',
+          fallback_price: 8990,
+          fallback_compare: 11990,
+          fallback_image: 'WhatsApp Image 2026-11-24 at 20.13.23.jpeg'
+        %}
+
+        <!-- 3. CATRACADA TURBO -->
+        {% render 'product-card',
+          product: all_products['catracada-turbo'],
+          fallback_title: 'CATRACADA TURBO',
+          category_label: 'MÁXIMA FORÇA & EXPLOSÃO',
+          badge_text: 'TURBO PERFORMANCE',
+          fallback_desc: '60 Cápsulas (34g). Extrato de Fenogreco (300mg), Arginina, Beta-Alanina, Taurina, Cafeína, Guaraná, Zinco (29mg) e Boro (8mg).',
+          fallback_price: 9990,
+          fallback_compare: 12990,
+          fallback_image: 'WhatsApp Image 2026-11-24 at 20.09.45.jpeg'
+        %}
+
+        <!-- 4. DILA POWER BLACK UVA 300G -->
+        {% render 'product-card',
+          product: all_products['dila-power-black-uva-300g'],
+          fallback_title: 'DILA POWER BLACK UVA 300G',
+          category_label: 'PRÉ TREINO • EXPLOSÃO MUSCULAR',
+          badge_text: 'PRÉ-TREINO INSANO',
+          fallback_desc: 'Suplemento em pó Sabor Uva (300g). Fórmula com Beta-Alanina, L-Arginina, Taurina, L-Glicina, L-Tirosina, Ácido Aspártico e Cafeína.',
+          fallback_price: 10990,
+          fallback_compare: 13990,
+          fallback_image: 'DILA POWER BLACK UVA 300G.png'
+        %}
+
+        <!-- 5. CREATINA CATRACADA PURA 300G -->
+        {% render 'product-card',
+          product: all_products['creatina-catracada-pura-300g'],
+          fallback_title: 'CREATINA CATRACADA PURA 300G',
+          category_label: 'CREATINAS • FORÇA & VOLUME',
+          badge_text: '100% PURA',
+          fallback_desc: 'Creatina Monohidratada Micronizada (300g). Aumento de força explosiva, ganho de volume muscular e recuperação acelerada entre treinos.',
+          fallback_price: 8990,
+          fallback_compare: 11990,
+          fallback_image: 'DILA POWER BLACK UVA 300G.png'
+        %}
+
+        <!-- 6. CATRACADA THERMO FIRE -->
+        {% render 'product-card',
+          product: all_products['catracada-thermo-fire'],
+          fallback_title: 'CATRACADA THERMO FIRE',
+          category_label: 'TERMOGÊNICOS • METABOLISMO ATIVO',
+          badge_text: 'QUEIMA EXTREMA',
+          fallback_desc: '60 Cápsulas ultra concentradas com Cafeína Anidra (200mg), Extrato de Laranja Moro, Pimenta Caiena, Cromo e Chá Verde para definição.',
+          fallback_price: 8490,
+          fallback_compare: 10990,
+          fallback_image: 'WhatsApp Image 2026-11-24 at 20.09.45.jpeg'
+        %}
+
+        <!-- 7. CATRACADA SLIMZINHO REDUTOR -->
+        {% render 'product-card',
+          product: all_products['catracada-slimzinho-redutor'],
+          fallback_title: 'CATRACADA SLIMZINHO REDUTOR',
+          category_label: 'EMAGRECEDORES • CONTROLE & MEDIDAS',
+          badge_text: 'DESAFIO REDUTOR',
+          fallback_desc: '60 Cápsulas com Psyllium, Espirulina, Quitosana, Picolinato de Cromo e L-Carnitina para saciedade prolongada e redução de medidas.',
+          fallback_price: 7990,
+          fallback_compare: 10490,
+          fallback_image: 'WhatsApp Image 2026-11-24 at 20.13.23.jpeg'
+        %}
+
+        <!-- 8. CATRACADA HAIR FORCE -->
+        {% render 'product-card',
+          product: all_products['catracada-hair-force'],
+          fallback_title: 'CATRACADA HAIR FORCE',
+          category_label: 'QUEDA CAPILAR • FORÇA & CRESCIMENTO',
+          badge_text: 'ANTI-QUEDA',
+          fallback_desc: '60 Cápsulas com Biotina concentrada, Zinco Quelato, Selênio, Silício Orgânico e Complexo B para fortalecimento capilar e barba.',
+          fallback_price: 7490,
+          fallback_compare: 9990,
+          fallback_image: 'OIG.png'
+        %}
+
+        <!-- 9. COMBO ULTRA VITALIDADE (3X) -->
+        {% render 'product-card',
+          product: all_products['combo-ultra-vitalidade'],
+          fallback_title: 'COMBO ULTRA VITALIDADE (3X)',
+          category_label: 'COMBOS • TRATAMENTO 90 DIAS',
+          badge_text: 'MAIOR ECONOMIA',
+          fallback_desc: 'Kit completo com 1x Catracada Test + 1x Black Dragon Test + 1x Catracada Turbo. Ciclo completo de alta performance com desconto máximo.',
+          fallback_price: 21990,
+          fallback_compare: 26970,
+          fallback_image: 'WhatsApp Image 2026-11-24 at 20.09.45.jpeg'
+        %}
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Carrossel de Produtos",
+  "settings": [
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Selecionar Produtos do Carrossel (Catracada Test, Black Dragon Test, Catracada Turbo)",
+      "limit": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Carrossel de Produtos Catracada"
+    }
+  ]
+}
+{% endschema %}

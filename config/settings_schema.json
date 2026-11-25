@@ -1,0 +1,135 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Catracada Performance OS 2.0",
+    "theme_version": "1.0.0",
+    "theme_author": "Catracada / Natural Zone Architecture",
+    "theme_documentation_url": "https://www.catracada.com.br/",
+    "theme_support_url": "https://www.catracada.com.br/"
+  },
+  {
+    "name": "Cores e Identidade Visual",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Paleta Azul Escuro, Branco e Vermelho"
+      },
+      {
+        "type": "color",
+        "id": "color_bg_primary",
+        "label": "Fundo Principal (Azul Escuro Abissal)",
+        "default": "#060B16"
+      },
+      {
+        "type": "color",
+        "id": "color_bg_secondary",
+        "label": "Fundo Secundário (Header / Seções / Rodapé)",
+        "default": "#0D172A"
+      },
+      {
+        "type": "color",
+        "id": "color_bg_card",
+        "label": "Fundo dos Cards (Azul Noturno)",
+        "default": "#13203B"
+      },
+      {
+        "type": "color",
+        "id": "color_text_primary",
+        "label": "Cor do Texto Principal (Branco)",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "color_text_secondary",
+        "label": "Cor do Texto Secundário",
+        "default": "#CBD5E1"
+      },
+      {
+        "type": "color",
+        "id": "color_accent_red",
+        "label": "Cor de Destaque (Vermelho Catracada)",
+        "default": "#E3242B"
+      },
+      {
+        "type": "color",
+        "id": "color_accent_red_hover",
+        "label": "Cor de Destaque Hover (Vermelho Vibrante)",
+        "default": "#FF2A32"
+      }
+    ]
+  },
+  {
+    "name": "Regras Comerciais (PIX e Parcelas)",
+    "settings": [
+      {
+        "type": "range",
+        "id": "pix_discount_percentage",
+        "min": 0,
+        "max": 30,
+        "step": 1,
+        "unit": "%",
+        "label": "Percentual de Desconto no PIX",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "installments_max",
+        "min": 1,
+        "max": 12,
+        "step": 1,
+        "label": "Número Máximo de Parcelas Sem Juros",
+        "default": 3
+      }
+    ]
+  },
+  {
+    "name": "Redes Sociais, Contato e Loja Física",
+    "settings": [
+      {
+        "type": "text",
+        "id": "whatsapp_number",
+        "label": "WhatsApp (apenas números com DDI+DDD)",
+        "default": "5511985538439"
+      },
+      {
+        "type": "text",
+        "id": "whatsapp_display",
+        "label": "Telefone / WhatsApp para Exibição",
+        "default": "(11) 98553-8439"
+      },
+      {
+        "type": "text",
+        "id": "contact_email",
+        "label": "E-mail de Atendimento",
+        "default": "naturalzoneprodutosnaturais@gmail.com"
+      },
+      {
+        "type": "url",
+        "id": "social_instagram_link",
+        "label": "URL do Instagram (@naturalzone.br)"
+      },
+      {
+        "type": "url",
+        "id": "social_tiktok_link",
+        "label": "URL do TikTok (@naturalzonebr)"
+      },
+      {
+        "type": "url",
+        "id": "google_review_link",
+        "label": "URL de Avaliação no Google (Loja 01)"
+      },
+      {
+        "type": "textarea",
+        "id": "store_address",
+        "label": "Endereço da Loja Física",
+        "default": "Estrada Dom João Nery, 1843 - Vila Silva Teles, São Paulo - SP, CEP: 08452-340"
+      },
+      {
+        "type": "text",
+        "id": "google_maps_embed_url",
+        "label": "URL do Google Maps Embed",
+        "default": "https://www.google.com/maps?q=Estrada+Dom+Jo%C3%A3o+Nery,+1843+-+Vila+Silva+Teles,+S%C3%A3o+Paulo+-+SP,+08452-340&output=embed"
+      }
+    ]
+  }
+]

@@ -1,0 +1,66 @@
+{%- comment -%}
+  Section: brand-story.liquid
+  Seção QUEM SOMOS (#quem-somos) vinculada ao Menu Principal
+{%- endcomment -%}
+
+<section id="quem-somos" class="brand-story-section" aria-label="Quem Somos - Catracada e Natural Zone">
+  <div class="container brand-story__grid">
+    <div class="brand-story__visual">
+      <img
+        class="brand-story__mascot"
+        src="{{ 'OIG.png' | asset_url }}"
+        alt="Mascote Oficial Catracada"
+        width="290"
+        height="290"
+        loading="lazy"
+      >
+      <img
+        src="{{ 'Catracada_LOGO.png' | asset_url }}"
+        alt="Logo Catracada"
+        width="170"
+        height="48"
+        loading="lazy"
+        style="height: 44px; width: auto; object-fit: contain;"
+      >
+    </div>
+
+    <div class="brand-story__content">
+      <span class="section-eyebrow">QUEM SOMOS</span>
+      <h2 class="section-title">
+        A FORÇA DA <span>CATRACADA</span> &amp; <span>NATURAL ZONE</span>
+      </h2>
+      <p>
+        Fundada em 2021 em São Paulo, a <strong>Natural Zone Produtos Naturais e Suplementos</strong> nasceu com o compromisso de entregar suplementação séria, matérias-primas selecionadas e resultados reais para quem busca alta performance física, vigor, disposição e saúde.
+      </p>
+      <p>
+        Nossa linha exclusiva <strong>CATRACADA</strong> (<em>Catracada Test</em>, <em>Catracada Turbo</em>, <em>Black Dragon Test</em> e <em>Dila Power Black</em>) combina ativos de máxima concentração com envio expresso em até 24h para São Paulo e região, além do atendimento presencial em nossa Loja Física na Zona Leste de SP.
+      </p>
+
+      <div class="brand-story__stats">
+        <div class="brand-stat-box">
+          <span class="brand-stat-box__num">+26 MIL</span>
+          <span class="brand-stat-box__label">Seguidores no Instagram</span>
+        </div>
+        <div class="brand-stat-box">
+          <span class="brand-stat-box__num">24 HORAS</span>
+          <span class="brand-stat-box__label">Envio Rápido SP e Região</span>
+        </div>
+        <div class="brand-stat-box">
+          <span class="brand-stat-box__num">LOJA FÍSICA</span>
+          <span class="brand-stat-box__label">Retirada Oficial em SP</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Quem Somos",
+  "presets": [
+    {
+      "name": "Quem Somos (Catracada)"
+    }
+  ]
+}
+{% endschema %}

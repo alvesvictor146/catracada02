@@ -1,0 +1,695 @@
+<!doctype html>
+<html class="js" lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#060B16">
+  <title>Catracada | Natural Zone — Preview Oficial Shopify Redesign</title>
+  <meta name="description" content="Catracada & Natural Zone - Suplementos de alta performance: Catracada Test, Black Dragon Test, Catracada Turbo com 10% OFF no PIX e envio em até 24h para SP.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:ital,wght@0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/base.css">
+  <link rel="stylesheet" href="assets/components.css">
+  <link rel="stylesheet" href="assets/animations.css">
+  <link rel="stylesheet" href="assets/responsive.css">
+</head>
+
+<body class="template-index">
+  <!-- 1. BARRA DE ANÚNCIO -->
+  <div class="announcement-bar" role="region" aria-label="Destaques Comerciais">
+    <div class="container announcement-bar__inner">
+      <span class="announcement-bar__item">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+        10% OFF NO PIX
+      </span>
+      <span class="announcement-bar__sep">|</span>
+      <span class="announcement-bar__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+        PARCELAS EM ATÉ 3X SEM JUROS
+      </span>
+      <span class="announcement-bar__sep">|</span>
+      <span class="announcement-bar__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+        ENVIOS EM ATÉ 24H PARA SÃO PAULO E REGIÃO
+      </span>
+      <span class="announcement-bar__sep">|</span>
+      <span class="announcement-bar__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        RETIRADA EM LOJA FÍSICA
+      </span>
+    </div>
+  </div>
+
+  <!-- 2. HEADER & MENU PRINCIPAL -->
+  <header class="site-header" role="banner">
+    <div class="container site-header__inner">
+      <a href="#" class="site-header__logo" aria-label="Catracada | Natural Zone">
+        <img class="site-header__logo-img" src="Catracada_LOGO.png" alt="Catracada | Natural Zone" width="160" height="46">
+      </a>
+
+      <nav class="site-nav" data-site-nav role="navigation" aria-label="Menu Principal">
+        <div class="site-nav__item">
+          <a href="#produtos" class="site-nav__link">
+            NOSSOS PRODUTOS
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="site-nav__dropdown" role="menu">
+            <a href="#categorias" class="site-nav__dropdown-link"><span>ESTIMULANTES</span> <span>&rsaquo;</span></a>
+            <a href="#categorias" class="site-nav__dropdown-link"><span>CREATINAS</span> <span>&rsaquo;</span></a>
+            <a href="#categorias" class="site-nav__dropdown-link"><span>PRÉ TREINO</span> <span>&rsaquo;</span></a>
+            <a href="#categorias" class="site-nav__dropdown-link"><span>EMAGRECEDORES</span> <span>&rsaquo;</span></a>
+            <a href="#categorias" class="site-nav__dropdown-link"><span>TERMOGÊNICOS</span> <span>&rsaquo;</span></a>
+            <a href="#categorias" class="site-nav__dropdown-link"><span>QUEDA CAPILAR</span> <span>&rsaquo;</span></a>
+          </div>
+        </div>
+
+        <div class="site-nav__item"><a href="#categorias" class="site-nav__link">COMBOS</a></div>
+        <div class="site-nav__item"><a href="#quem-somos" class="site-nav__link">QUEM SOMOS</a></div>
+        <div class="site-nav__item"><a href="#localizacao" class="site-nav__link">LOCALIZAÇÃO</a></div>
+        <div class="site-nav__item"><a href="#contato" class="site-nav__link">CONTATO</a></div>
+      </nav>
+
+      <div class="site-header__actions">
+        <a href="#carrinho" class="header-action-btn" data-cart-open aria-label="Abrir Carrinho">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          <span>CARRINHO</span>
+          <span class="cart-count-badge" data-cart-count>0</span>
+        </a>
+        <button type="button" class="header-action-btn mobile-menu-toggle" data-mobile-menu-toggle aria-expanded="false" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="MainContent" class="main-content">
+    <!-- 3. HERO: TÍTULO LIMPO À ESQUERDA + CARROSSEL COM OS 4 ITENS À DIREITA -->
+    <section class="hero-banner" aria-label="Destaque Principal Catracada">
+      <div class="hero-banner__video-bg" aria-hidden="true">
+        <video autoplay muted loop playsinline preload="metadata" src="Produto_em_destaque_com_tempestade_3a642322_1080p.mp4"></video>
+      </div>
+      <div class="hero-banner__overlay" aria-hidden="true"></div>
+
+      <div class="container hero-banner__grid">
+        <!-- Esquerda: Apenas o Título Principal (itens circulados removidos) -->
+        <div class="hero-banner__content">
+          <h1 class="hero-banner__title" style="margin-bottom: 0;">
+            POTÊNCIA MÁXIMA, <span>FORÇA</span> E <span>VITALIDADE</span> EXTREMA
+          </h1>
+        </div>
+
+        <!-- Direita: Carrossel com os 4 Itens Anunciados à Direita do Hero -->
+        <div class="hero-carousel" data-hero-carousel aria-label="Carrossel de Destaques do Hero">
+          <div class="hero-carousel__viewport">
+            <button type="button" class="hero-carousel__arrow hero-carousel__arrow--prev" data-hero-prev aria-label="Slide anterior">&lsaquo;</button>
+            <button type="button" class="hero-carousel__arrow hero-carousel__arrow--next" data-hero-next aria-label="Próximo slide">&rsaquo;</button>
+
+            <!-- Posição 1 (antigo 2): BLACK DRAGON TEST -->
+            <div class="hero-carousel__slide is-active" data-hero-slide>
+              <div class="hero-product-slide">
+                <div class="hero-product-slide__img-box">
+                  <img class="hero-product-slide__img" src="WhatsApp Image 2026-11-24 at 20.13.23.jpeg" alt="BLACK DRAGON TEST">
+                </div>
+                <div class="hero-product-slide__content">
+                  <span class="hero-product-slide__tag">01 • POWER BLEND</span>
+                  <h2 class="hero-product-slide__title">BLACK DRAGON TEST</h2>
+                  <p class="hero-product-slide__meta">90 Tabletes • Tribulus + Maca Power • 90% Saponins</p>
+                  <a href="#produtos" class="btn btn--primary">VER OFERTA ABAIXO</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Posição 2 (antigo 3): CATRACADA TURBO -->
+            <div class="hero-carousel__slide" data-hero-slide>
+              <div class="hero-product-slide">
+                <div class="hero-product-slide__img-box">
+                  <img class="hero-product-slide__img" src="WhatsApp Image 2026-11-24 at 20.09.45.jpeg" alt="CATRACADA TURBO">
+                </div>
+                <div class="hero-product-slide__content">
+                  <span class="hero-product-slide__tag">02 • FORÇA EXTREMA</span>
+                  <h2 class="hero-product-slide__title">CATRACADA TURBO</h2>
+                  <p class="hero-product-slide__meta">60 Cápsulas • Fenogreco 300mg, Beta-Alanina, Boro &amp; Cafeína</p>
+                  <a href="#produtos" class="btn btn--primary">VER OFERTA ABAIXO</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Posição 3 (antigo 1): CATRACADA TEST (Vídeo do Frasco Azul) -->
+            <div class="hero-carousel__slide" data-hero-slide>
+              <div class="hero-product-slide">
+                <div class="hero-product-slide__img-box hero-product-slide__img-box--dark">
+                  <video
+                    class="hero-product-slide__video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    disablepictureinpicture
+                    preload="metadata"
+                    src="Produto_em_destaque_com_tempestade_3a642322_1080p.mp4"
+                  ></video>
+                </div>
+                <div class="hero-product-slide__content">
+                  <span class="hero-product-slide__tag">03 • VIGOR &amp; ENERGIA</span>
+                  <h2 class="hero-product-slide__title">CATRACADA TEST</h2>
+                  <p class="hero-product-slide__meta">60 Cápsulas • Complexo B, Zinco, Magnésio, Arginina &amp; Taurina</p>
+                  <a href="#produtos" class="btn btn--primary">VER OFERTA ABAIXO</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas / Indicadores na sequência: Black Dragon Test, Catracada Turbo, Catracada Test -->
+          <div class="hero-carousel__dots" role="tablist" aria-label="Selecionar item do Hero">
+            <button type="button" class="hero-carousel__dot is-active" data-hero-dot aria-selected="true">1. BLACK DRAGON TEST</button>
+            <button type="button" class="hero-carousel__dot" data-hero-dot aria-selected="false">2. CATRACADA TURBO</button>
+            <button type="button" class="hero-carousel__dot" data-hero-dot aria-selected="false">3. CATRACADA TEST</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PRODUTOS PARA COMPRA IMEDIATA (CARROSSEL) -->
+    <section id="produtos" class="featured-carousel-section">
+      <div class="container">
+        <div class="carousel-toolbar">
+          <div class="section-header">
+            <span class="section-eyebrow">COMPRA RÁPIDA • PRONTA ENTREGA</span>
+            <h2 class="section-title">DESTAQUES <span>CATRACADA</span></h2>
+            <p class="section-subtitle">Escolha seu suplemento de alta performance com <strong>10% OFF no PIX</strong> ou em até <strong>3x sem juros</strong>.</p>
+          </div>
+
+          <div class="carousel-nav-buttons">
+            <button type="button" class="carousel-btn" data-carousel-prev aria-label="Anterior">&lsaquo;</button>
+            <button type="button" class="carousel-btn" data-carousel-next aria-label="Próximo">&rsaquo;</button>
+          </div>
+        </div>
+
+        <div class="product-carousel-track" data-carousel-track>
+          <!-- PRODUTO 1: CATRACADA TEST -->
+          <article class="product-card">
+            <div class="product-card__badges">
+              <span class="badge badge--red">MAIS VENDIDO</span>
+              <span class="badge badge--dark">10% OFF PIX</span>
+            </div>
+            <a href="#produtos" class="product-card__media" style="background:#0B162C;">
+              <img class="product-card__img" src="OIG.png" alt="CATRACADA TEST">
+            </a>
+            <div class="product-card__body">
+              <span class="product-card__category">ESTIMULANTE &amp; VIGOR MASCULINO</span>
+              <h3 class="product-card__title"><a href="#produtos">CATRACADA TEST</a></h3>
+              <p class="product-card__desc">60 Cápsulas (34g). Fórmula concentrada com Vitaminas B3 e B6, Magnésio, Zinco, L-Arginina, Taurina e Saponinas para máxima disposição e vigor.</p>
+              <div class="price-block">
+                <span class="price-block__compare">De R$ 99,90</span>
+                <div class="price-block__main-row">
+                  <span class="price-block__pix-price">R$ 71,91</span>
+                  <span class="price-block__pix-tag">10% OFF NO PIX</span>
+                </div>
+                <span class="price-block__installments">ou <strong>R$ 79,90</strong> em até <strong>3x de R$ 26,63</strong> sem juros</span>
+              </div>
+              <form data-ajax-cart-form data-product-title="CATRACADA TEST" data-product-price="7990" data-product-image="OIG.png">
+                <button type="submit" class="btn btn--primary btn--full">COMPRAR AGORA</button>
+              </form>
+            </div>
+          </article>
+
+          <!-- PRODUTO 2: BLACK DRAGON TEST -->
+          <article class="product-card">
+            <div class="product-card__badges">
+              <span class="badge badge--red">FÓRMULA AVANÇADA</span>
+              <span class="badge badge--dark">10% OFF PIX</span>
+            </div>
+            <a href="#produtos" class="product-card__media">
+              <img class="product-card__img" src="WhatsApp Image 2026-11-24 at 20.13.23.jpeg" alt="BLACK DRAGON TEST">
+            </a>
+            <div class="product-card__body">
+              <span class="product-card__category">POWER BLEND • 90% SAPONINS</span>
+              <h3 class="product-card__title"><a href="#produtos">BLACK DRAGON TEST</a></h3>
+              <p class="product-card__desc">90 Tabletes (1.1g por tablete). Black Dragon Labs com Tribulus Terrestris, Maca Peruana Power Blend, Fenogreco e Arginina.</p>
+              <div class="price-block">
+                <span class="price-block__compare">De R$ 119,90</span>
+                <div class="price-block__main-row">
+                  <span class="price-block__pix-price">R$ 80,91</span>
+                  <span class="price-block__pix-tag">10% OFF NO PIX</span>
+                </div>
+                <span class="price-block__installments">ou <strong>R$ 89,90</strong> em até <strong>3x de R$ 29,96</strong> sem juros</span>
+              </div>
+              <form data-ajax-cart-form data-product-title="BLACK DRAGON TEST" data-product-price="8990" data-product-image="WhatsApp Image 2026-11-24 at 20.13.23.jpeg">
+                <button type="submit" class="btn btn--primary btn--full">COMPRAR AGORA</button>
+              </form>
+            </div>
+          </article>
+
+          <!-- PRODUTO 3: CATRACADA TURBO -->
+          <article class="product-card">
+            <div class="product-card__badges">
+              <span class="badge badge--red">TURBO PERFORMANCE</span>
+              <span class="badge badge--dark">10% OFF PIX</span>
+            </div>
+            <a href="#produtos" class="product-card__media">
+              <img class="product-card__img" src="WhatsApp Image 2026-11-24 at 20.09.45.jpeg" alt="CATRACADA TURBO">
+            </a>
+            <div class="product-card__body">
+              <span class="product-card__category">MÁXIMA FORÇA &amp; EXPLOSÃO</span>
+              <h3 class="product-card__title"><a href="#produtos">CATRACADA TURBO</a></h3>
+              <p class="product-card__desc">60 Cápsulas (34g). Extrato de Fenogreco (300mg), Arginina, Beta-Alanina, Taurina, Cafeína, Guaraná, Zinco (29mg) e Boro (8mg).</p>
+              <div class="price-block">
+                <span class="price-block__compare">De R$ 129,90</span>
+                <div class="price-block__main-row">
+                  <span class="price-block__pix-price">R$ 89,91</span>
+                  <span class="price-block__pix-tag">10% OFF NO PIX</span>
+                </div>
+                <span class="price-block__installments">ou <strong>R$ 99,90</strong> em até <strong>3x de R$ 33,30</strong> sem juros</span>
+              </div>
+              <form data-ajax-cart-form data-product-title="CATRACADA TURBO" data-product-price="9990" data-product-image="WhatsApp Image 2026-11-24 at 20.09.45.jpeg">
+                <button type="submit" class="btn btn--primary btn--full">COMPRAR AGORA</button>
+              </form>
+            </div>
+          </article>
+
+          <!-- PRODUTO 4 (FICTÍCIO / CATÁLOGO): DILA POWER BLACK UVA 300G -->
+          <article class="product-card">
+            <div class="product-card__badges">
+              <span class="badge badge--red">PRÉ-TREINO INSANO</span>
+              <span class="badge badge--dark">10% OFF PIX</span>
+            </div>
+            <a href="#produtos" class="product-card__media">
+              <img class="product-card__img" src="DILA POWER BLACK UVA 300G.png" alt="DILA POWER BLACK UVA 300G">
+            </a>
+            <div class="product-card__body">
+              <span class="product-card__category">PRÉ TREINO • EXPLOSÃO MUSCULAR</span>
+              <h3 class="product-card__title"><a href="#produtos">DILA POWER BLACK UVA 300G</a></h3>
+              <p class="product-card__desc">Suplemento em pó Sabor Uva (300g). Fórmula com Beta-Alanina, L-Arginina, Taurina, L-Glicina, L-Tirosina, Ácido Aspártico e Cafeína.</p>
+              <div class="price-block">
+                <span class="price-block__compare">De R$ 139,90</span>
+                <div class="price-block__main-row">
+                  <span class="price-block__pix-price">R$ 98,91</span>
+                  <span class="price-block__pix-tag">10% OFF NO PIX</span>
+                </div>
+                <span class="price-block__installments">ou <strong>R$ 109,90</strong> em até <strong>3x de R$ 36,63</strong> sem juros</span>
+              </div>
+              <form data-ajax-cart-form data-product-title="DILA POWER BLACK UVA 300G" data-product-price="10990" data-product-image="DILA POWER BLACK UVA 300G.png">
+                <button type="submit" class="btn btn--primary btn--full">COMPRAR AGORA</button>
+              </form>
+            </div>
+          </article>
+
+          <!-- PRODUTO 5 (FICTÍCIO): CREATINA CATRACADA 100% PURA 300G -->
+          <article class="product-card">
+            <div class="product-card__badges">
+              <span class="badge badge--red">100% PURA</span>
+              <span class="badge badge--dark">10% OFF PIX</span>
+            </div>
+            <a href="#produtos" class="product-card__media">
+              <img class="product-card__img" src="DILA POWER BLACK UVA 300G.png" alt="CREATINA CATRACADA 100% PURA 300G">
+            </a>
+            <div class="product-card__body">
+              <span class="product-card__category">CREATINAS • FORÇA &amp; VOLUME</span>
+              <h3 class="product-card__title"><a href="#produtos">CREATINA CATRACADA PURA 300G</a></h3>
+              <p class="product-card__desc">Creatina Monohidratada Micronizada (300g). Aumento de força explosiva, ganho de volume muscular e recuperação acelerada entre treinos.</p>
+              <div class="price-block">
+                <span class="price-block__compare">De R$ 119,90</span>
+                <div class="price-block__main-row">
+                  <span class="price-block__pix-price">R$ 80,91</span>
+                  <span class="price-block__pix-tag">10% OFF NO PIX</span>
+                </div>
+                <span class="price-block__installments">ou <strong>R$ 89,90</strong> em até <strong>3x de R$ 29,96</strong> sem juros</span>
+              </div>
+              <form data-ajax-cart-form data-product-title="CREATINA CATRACADA PURA 300G" data-product-price="8990" data-product-image="DILA POWER BLACK UVA 300G.png">
+                <button type="submit" class="btn btn--primary btn--full">COMPRAR AGORA</button>
+              </form>
+            </div>
+          </article>
+
+          <!-- PRODUTO 6 (FICTÍCIO): CATRACADA THERMO FIRE 60 CÁPSULAS -->
+          <article class="product-card">
+            <div class="product-card__badges">
+              <span class="badge badge--red">QUEIMA EXTREMA</span>
+              <span class="badge badge--dark">10% OFF PIX</span>
+            </div>
+            <a href="#produtos" class="product-card__media">
+              <img class="product-card__img" src="WhatsApp Image 2026-11-24 at 20.09.45.jpeg" alt="CATRACADA THERMO FIRE">
+            </a>
+            <div class="product-card__body">
+              <span class="product-card__category">TERMOGÊNICOS • METABOLISMO ATIVO</span>
+              <h3 class="product-card__title"><a href="#produtos">CATRACADA THERMO FIRE</a></h3>
+              <p class="product-card__desc">60 Cápsulas ultra concentradas com Cafeína Anidra (200mg), Extrato de Laranja Moro, Pimenta Caiena, Cromo e Chá Verde para definição.</p>
+              <div class="price-block">
+                <span class="price-block__compare">De R$ 109,90</span>
+                <div class="price-block__main-row">
+                  <span class="price-block__pix-price">R$ 76,41</span>
+                  <span class="price-block__pix-tag">10% OFF NO PIX</span>
+                </div>
+                <span class="price-block__installments">ou <strong>R$ 84,90</strong> em até <strong>3x de R$ 28,30</strong> sem juros</span>
+              </div>
+              <form data-ajax-cart-form data-product-title="CATRACADA THERMO FIRE" data-product-price="8490" data-product-image="WhatsApp Image 2026-11-24 at 20.09.45.jpeg">
+                <button type="submit" class="btn btn--primary btn--full">COMPRAR AGORA</button>
+              </form>
+            </div>
+          </article>
+
+          <!-- PRODUTO 7 (FICTÍCIO): CATRACADA SLIMZINHO REDUTOR -->
+          <article class="product-card">
+            <div class="product-card__badges">
+              <span class="badge badge--red">DESAFIO REDUTOR</span>
+              <span class="badge badge--dark">10% OFF PIX</span>
+            </div>
+            <a href="#produtos" class="product-card__media">
+              <img class="product-card__img" src="WhatsApp Image 2026-11-24 at 20.13.23.jpeg" alt="CATRACADA SLIMZINHO REDUTOR">
+            </a>
+            <div class="product-card__body">
+              <span class="product-card__category">EMAGRECEDORES • CONTROLE &amp; MEDIDAS</span>
+              <h3 class="product-card__title"><a href="#produtos">CATRACADA SLIMZINHO REDUTOR</a></h3>
+              <p class="product-card__desc">60 Cápsulas com Psyllium, Espirulina, Quitosana, Picolinato de Cromo e L-Carnitina para saciedade prolongada e redução de medidas.</p>
+              <div class="price-block">
+                <span class="price-block__compare">De R$ 104,90</span>
+                <div class="price-block__main-row">
+                  <span class="price-block__pix-price">R$ 71,91</span>
+                  <span class="price-block__pix-tag">10% OFF NO PIX</span>
+                </div>
+                <span class="price-block__installments">ou <strong>R$ 79,90</strong> em até <strong>3x de R$ 26,63</strong> sem juros</span>
+              </div>
+              <form data-ajax-cart-form data-product-title="CATRACADA SLIMZINHO REDUTOR" data-product-price="7990" data-product-image="WhatsApp Image 2026-11-24 at 20.13.23.jpeg">
+                <button type="submit" class="btn btn--primary btn--full">COMPRAR AGORA</button>
+              </form>
+            </div>
+          </article>
+
+          <!-- PRODUTO 8 (FICTÍCIO): CATRACADA HAIR FORCE ANTI-QUEDA -->
+          <article class="product-card">
+            <div class="product-card__badges">
+              <span class="badge badge--red">ANTI-QUEDA</span>
+              <span class="badge badge--dark">10% OFF PIX</span>
+            </div>
+            <a href="#produtos" class="product-card__media" style="background:#0B162C;">
+              <img class="product-card__img" src="OIG.png" alt="CATRACADA HAIR FORCE ANTI-QUEDA">
+            </a>
+            <div class="product-card__body">
+              <span class="product-card__category">QUEDA CAPILAR • FORÇA &amp; CRESCIMENTO</span>
+              <h3 class="product-card__title"><a href="#produtos">CATRACADA HAIR FORCE</a></h3>
+              <p class="product-card__desc">60 Cápsulas com Biotina concentrada, Zinco Quelato, Selênio, Silício Orgânico e Complexo B para fortalecimento capilar e barba.</p>
+              <div class="price-block">
+                <span class="price-block__compare">De R$ 99,90</span>
+                <div class="price-block__main-row">
+                  <span class="price-block__pix-price">R$ 67,41</span>
+                  <span class="price-block__pix-tag">10% OFF NO PIX</span>
+                </div>
+                <span class="price-block__installments">ou <strong>R$ 74,90</strong> em até <strong>3x de R$ 24,96</strong> sem juros</span>
+              </div>
+              <form data-ajax-cart-form data-product-title="CATRACADA HAIR FORCE" data-product-price="7490" data-product-image="OIG.png">
+                <button type="submit" class="btn btn--primary btn--full">COMPRAR AGORA</button>
+              </form>
+            </div>
+          </article>
+
+          <!-- PRODUTO 9 (FICTÍCIO): COMBO ULTRA VITALIDADE (KIT 3 POTES) -->
+          <article class="product-card">
+            <div class="product-card__badges">
+              <span class="badge badge--red">MAIOR ECONOMIA</span>
+              <span class="badge badge--dark">10% OFF PIX</span>
+            </div>
+            <a href="#produtos" class="product-card__media">
+              <img class="product-card__img" src="WhatsApp Image 2026-11-24 at 20.09.45.jpeg" alt="COMBO ULTRA VITALIDADE 3 POTES">
+            </a>
+            <div class="product-card__body">
+              <span class="product-card__category">COMBOS • TRATAMENTO 90 DIAS</span>
+              <h3 class="product-card__title"><a href="#produtos">COMBO ULTRA VITALIDADE (3X)</a></h3>
+              <p class="product-card__desc">Kit completo com 1x Catracada Test + 1x Black Dragon Test + 1x Catracada Turbo. Ciclo completo de alta performance com desconto máximo.</p>
+              <div class="price-block">
+                <span class="price-block__compare">De R$ 269,70</span>
+                <div class="price-block__main-row">
+                  <span class="price-block__pix-price">R$ 197,91</span>
+                  <span class="price-block__pix-tag">10% OFF NO PIX</span>
+                </div>
+                <span class="price-block__installments">ou <strong>R$ 219,90</strong> em até <strong>3x de R$ 73,30</strong> sem juros</span>
+              </div>
+              <form data-ajax-cart-form data-product-title="COMBO ULTRA VITALIDADE (3X)" data-product-price="21990" data-product-image="WhatsApp Image 2026-11-24 at 20.09.45.jpeg">
+                <button type="submit" class="btn btn--primary btn--full">COMPRAR AGORA</button>
+              </form>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FAIXA DOS 5 DIFERENCIAIS COMERCIAIS -->
+    <section class="diferenciais-section">
+      <div class="container">
+        <div class="diferenciais-grid">
+          <div class="diferencial-card">
+            <div class="diferencial-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            </div>
+            <h3 class="diferencial-card__title">PARCELAS EM ATÉ 3X SEM JUROS</h3>
+            <p class="diferencial-card__desc">Facilidade no cartão de crédito com checkout 100% seguro.</p>
+          </div>
+
+          <div class="diferencial-card">
+            <div class="diferencial-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 12l10 10 10-10L12 2z"></path></svg>
+            </div>
+            <h3 class="diferencial-card__title">10% OFF NO PIX</h3>
+            <p class="diferencial-card__desc">Desconto imediato e aprovação instantânea do seu pedido.</p>
+          </div>
+
+          <div class="diferencial-card">
+            <div class="diferencial-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </div>
+            <h3 class="diferencial-card__title">RETIRADA EM LOJA FÍSICA</h3>
+            <p class="diferencial-card__desc">Compre no site e retire na Loja 01 em São Paulo - SP.</p>
+          </div>
+
+          <div class="diferencial-card">
+            <div class="diferencial-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            </div>
+            <h3 class="diferencial-card__title">ENVIOS EM ATÉ 24H PARA SÃO PAULO E REGIÃO</h3>
+            <p class="diferencial-card__desc">Logística expressa para você receber com máxima agilidade.</p>
+          </div>
+
+          <div class="diferencial-card">
+            <div class="diferencial-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+            </div>
+            <h3 class="diferencial-card__title">ENTREGA GARANTIDA OU O DINHEIRO DE VOLTA * *</h3>
+            <p class="diferencial-card__desc">Pedido rastreado do envio até a porta da sua casa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CATEGORIAS (NOSSOS PRODUTOS + COMBOS) -->
+    <section id="categorias" class="categories-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">NOSSOS PRODUTOS</span>
+          <h2 class="section-title">NAVEGUE POR <span>OBJETIVO</span></h2>
+          <p class="section-subtitle">Encontre rapidamente a linha ideal para sua evolução física, energia e saúde.</p>
+        </div>
+
+        <div class="categories-grid">
+          <a href="#produtos" class="category-tile">
+            <span class="category-tile__tag">LINHA CATRACADA</span>
+            <h3 class="category-tile__title">ESTIMULANTES</h3>
+            <span class="category-tile__cta">Ver Produtos &rsaquo;</span>
+          </a>
+          <a href="#produtos" class="category-tile">
+            <span class="category-tile__tag">FORÇA &amp; EXPLOSÃO</span>
+            <h3 class="category-tile__title">CREATINAS</h3>
+            <span class="category-tile__cta">Ver Produtos &rsaquo;</span>
+          </a>
+          <a href="#produtos" class="category-tile">
+            <span class="category-tile__tag">DILA POWER &amp; FOCO</span>
+            <h3 class="category-tile__title">PRÉ TREINO</h3>
+            <span class="category-tile__cta">Ver Produtos &rsaquo;</span>
+          </a>
+          <a href="#produtos" class="category-tile">
+            <span class="category-tile__tag">DEFINIÇÃO &amp; MEDIDAS</span>
+            <h3 class="category-tile__title">EMAGRECEDORES</h3>
+            <span class="category-tile__cta">Ver Produtos &rsaquo;</span>
+          </a>
+          <a href="#produtos" class="category-tile">
+            <span class="category-tile__tag">METABOLISMO ATIVO</span>
+            <h3 class="category-tile__title">TERMOGÊNICOS</h3>
+            <span class="category-tile__cta">Ver Produtos &rsaquo;</span>
+          </a>
+          <a href="#produtos" class="category-tile">
+            <span class="category-tile__tag">SAÚDE &amp; TRATAMENTO</span>
+            <h3 class="category-tile__title">QUEDA CAPILAR</h3>
+            <span class="category-tile__cta">Ver Produtos &rsaquo;</span>
+          </a>
+          <a href="#produtos" class="category-tile category-tile--featured">
+            <span class="category-tile__tag">ECONOMIA MÁXIMA • KITS OFICIAIS</span>
+            <h3 class="category-tile__title">COMBOS PROMOCIONAIS CATRACADA</h3>
+            <span class="category-tile__cta">Aproveitar Descontos nos Kits &rsaquo;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. QUEM SOMOS -->
+    <section id="quem-somos" class="brand-story-section">
+      <div class="container brand-story__grid">
+        <div class="brand-story__visual">
+          <img class="brand-story__mascot" src="OIG.png" alt="Mascote Oficial Catracada" width="290" height="290">
+          <img src="Catracada_LOGO.png" alt="Logo Catracada" width="170" height="48" style="height: 44px; width: auto; object-fit: contain;">
+        </div>
+
+        <div class="brand-story__content">
+          <span class="section-eyebrow">QUEM SOMOS</span>
+          <h2 class="section-title">A FORÇA DA <span>CATRACADA</span> &amp; <span>NATURAL ZONE</span></h2>
+          <p>
+            Fundada em 2021 em São Paulo, a <strong>Natural Zone Produtos Naturais e Suplementos</strong> nasceu com o compromisso de entregar suplementação séria, matérias-primas selecionadas e resultados reais para quem busca alta performance física, vigor, disposição e saúde.
+          </p>
+          <p>
+            Nossa linha exclusiva <strong>CATRACADA</strong> (<em>Catracada Test</em>, <em>Catracada Turbo</em>, <em>Black Dragon Test</em> e <em>Dila Power Black</em>) combina ativos de máxima concentração com envio expresso em até 24h para São Paulo e região, além do atendimento presencial em nossa Loja Física na Zona Leste de SP.
+          </p>
+
+          <div class="brand-story__stats">
+            <div class="brand-stat-box">
+              <span class="brand-stat-box__num">+26 MIL</span>
+              <span class="brand-stat-box__label">Seguidores no Instagram</span>
+            </div>
+            <div class="brand-stat-box">
+              <span class="brand-stat-box__num">24 HORAS</span>
+              <span class="brand-stat-box__label">Envio Rápido SP e Região</span>
+            </div>
+            <div class="brand-stat-box">
+              <span class="brand-stat-box__num">LOJA FÍSICA</span>
+              <span class="brand-stat-box__label">Retirada Oficial em SP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 8. RODAPÉ COM REDES SOCIAIS E MAPA DO GOOGLE -->
+  <footer id="contato" class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__top-grid">
+        <div>
+          <a href="#" class="site-header__logo">
+            <img class="site-header__logo-img" src="Catracada_LOGO.png" alt="Catracada | Natural Zone" width="160" height="46">
+          </a>
+          <p class="footer-brand__desc">
+            <strong>Natural Zone Produtos Naturais e Suplementos</strong> — A casa oficial da linha <strong>Catracada</strong>. Suplementos de alta performance com envio rápido para todo o Brasil e retirada em loja física.
+          </p>
+
+          <h3 class="footer-col__title">REDES SOCIAIS &amp; AVALIAÇÕES</h3>
+          <div class="social-buttons-list">
+            <a href="https://www.instagram.com/naturalzone.br" class="social-btn" target="_blank" rel="noopener noreferrer">
+              <span>INSTAGRAM • @naturalzone.br (26K)</span>
+            </a>
+            <a href="https://www.tiktok.com/@naturalzonebr" class="social-btn" target="_blank" rel="noopener noreferrer">
+              <span>TIKTOK • @naturalzonebr</span>
+            </a>
+            <a href="https://g.page/r/CbuLKDucytYzEAE/review" class="social-btn" target="_blank" rel="noopener noreferrer">
+              <span>AVALIE A LOJA 01 NO GOOGLE</span>
+            </a>
+            <a href="https://wa.me/5511985538439" class="social-btn" target="_blank" rel="noopener noreferrer">
+              <span>WHATSAPP • (11) 98553-8439</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-col__title">NOSSOS PRODUTOS</h3>
+          <ul class="footer-links-list" style="margin-bottom: 1.75rem;">
+            <li><a href="#categorias">&rsaquo; Estimulantes</a></li>
+            <li><a href="#categorias">&rsaquo; Creatinas</a></li>
+            <li><a href="#categorias">&rsaquo; Pré Treino</a></li>
+            <li><a href="#categorias">&rsaquo; Emagrecedores</a></li>
+            <li><a href="#categorias">&rsaquo; Termogênicos</a></li>
+            <li><a href="#categorias">&rsaquo; Queda Capilar</a></li>
+            <li><a href="#categorias">&rsaquo; Combos Promocionais</a></li>
+          </ul>
+
+          <h3 class="footer-col__title">ATENDIMENTO</h3>
+          <ul class="footer-links-list">
+            <li><a href="#quem-somos">Quem Somos</a></li>
+            <li><a href="#localizacao">Localização da Loja Física</a></li>
+            <li><a href="mailto:naturalzoneprodutosnaturais@gmail.com">naturalzoneprodutosnaturais@gmail.com</a></li>
+          </ul>
+        </div>
+
+        <div id="localizacao" class="footer-map-col">
+          <h3 class="footer-col__title">LOCALIZAÇÃO — LOJA FÍSICA 01</h3>
+          <div class="footer-map-card">
+            <div class="footer-map-card__address">
+              <div>
+                <strong>Natural Zone Produtos Naturais e Suplementos - Loja 01</strong><br>
+                Estrada Dom João Nery, 1843 - Vila Silva Teles, São Paulo - SP, CEP: 08452-340
+              </div>
+            </div>
+
+            <div class="footer-map-card__iframe-wrap">
+              <iframe
+                title="Mapa de Localização Natural Zone - Loja 01"
+                src="https://www.google.com/maps?q=Estrada+Dom+Jo%C3%A3o+Nery,+1843+-+Vila+Silva+Teles,+S%C3%A3o+Paulo+-+SP,+08452-340&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Estrada+Dom+Jo%C3%A3o+Nery,+1843+-+Vila+Silva+Teles,+S%C3%A3o+Paulo+-+SP,+08452-340"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--outline btn--full"
+              style="padding: 0.65rem 1rem; font-size: 0.78rem;"
+            >
+              ABRIR ROTA NO GOOGLE MAPS
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 <strong>Catracada / Natural Zone Produtos Naturais e Suplementos</strong>. Todos os direitos reservados.</p>
+        <p>* * Entrega Garantida ou o Dinheiro de Volta conforme política oficial de envios e rastreamento da loja.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GAVETA DO CARRINHO AJAX -->
+  <div class="cart-drawer-backdrop" data-cart-backdrop></div>
+  <aside class="cart-drawer" data-cart-drawer aria-hidden="true">
+    <div class="cart-drawer__header">
+      <h2 class="cart-drawer__title">SEU CARRINHO (<span data-cart-count>0</span>)</h2>
+      <button type="button" class="header-action-btn" data-cart-close aria-label="Fechar">&times;</button>
+    </div>
+    <div class="cart-drawer__items" data-cart-items>
+      <p style="color: var(--color-text-secondary); text-align:center; padding: 2rem 0;">Seu carrinho está vazio.</p>
+    </div>
+    <div class="cart-drawer__footer">
+      <div class="cart-drawer__subtotal">
+        <span>SUBTOTAL:</span>
+        <span data-cart-subtotal>R$ 0,00</span>
+      </div>
+      <p class="cart-drawer__pix-hint">
+        No PIX (10% OFF): <strong style="color: var(--color-accent-red);" data-cart-pix-total>R$ 0,00</strong> ou em até 3x sem juros.
+      </p>
+      <a href="#checkout" class="btn btn--primary btn--full">FINALIZAR COMPRA SEGURA</a>
+    </div>
+  </aside>
+
+  <!-- WHATSAPP FLOAT -->
+  <a
+    href="https://wa.me/5511985538439?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Catracada%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <span class="whatsapp-float__label">Falar com Especialista</span>
+  </a>
+
+  <script src="assets/theme.js"></script>
+</body>
+</html>

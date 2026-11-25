@@ -1,0 +1,32 @@
+{%- comment -%}
+  Snippet: price.liquid
+  Calcula automaticamente:
+  - Preço original (compare_at_price)
+  - Preço com 10% OFF no PIX
+  - Parcelamento em até 3x sem juros
+  Aceita objeto `product` da Shopify ou valores fallback `fallback_price` (em centavos)
+{%- endcomment -%}
+{%- liquid
+  assign raw_price = product.price | default: fallback_price | default: 7990
+  assign raw_compare = product.compare_at_price | default: fallback_compare | default: 0
+  assign pix_discount = settings.pix_discount_percentage | default: 10
+  assign pix_multiplier = 100 | minus: pix_discount
+  assign pix_price = raw_price | times: pix_multiplier | divided_by: 100
+  assign installments_count = settings.installments_max | default: 3
+  assign installment_value = raw_price | divided_by: installments_count
+-%}
+
+<div class="price-block">
+  {%- if raw_compare > raw_price -%}
+    <span class="price-block__compare">De {{ raw_compare | money }}</span>
+  {%- endif -%}
+
+  <div class="price-block__main-row">
+    <span class="price-block__pix-price">{{ pix_price | money }}</span>
+    <span class="price-block__pix-tag">{{ pix_discount }}% OFF NO PIX</span>
+  </div>
+
+  <span class="price-block__installments">
+    ou <strong>{{ raw_price | money }}</strong> em até <strong>{{ installments_count }}x de {{ installment_value | money }}</strong> sem juros
+  </span>
+</div>

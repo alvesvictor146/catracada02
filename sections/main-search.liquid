@@ -1,0 +1,37 @@
+<section class="main-search-section container" style="padding: 3rem 1.25rem 4rem;">
+  <div class="section-header">
+    <h1 class="section-title">BUSCAR <span>PRODUTOS</span></h1>
+  </div>
+
+  <form action="{{ routes.search_url | default: '/search' }}" method="get" role="search" style="max-width:600px; margin:0 auto 2.5rem; display:flex; gap:0.75rem;">
+    <input
+      type="search"
+      name="q"
+      value="{{ search.terms | escape }}"
+      placeholder="{{ 'general.search.placeholder' | t }}"
+      style="flex:1; padding:0.9rem 1.1rem; background:var(--color-bg-card); border:1px solid var(--color-border-subtle); border-radius:var(--radius-sm); color:#FFFFFF;"
+    >
+    <button type="submit" class="btn btn--primary">BUSCAR</button>
+  </form>
+
+  {%- if search.performed -%}
+    {%- if search.results_count > 0 -%}
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem;">
+        {%- for item in search.results -%}
+          {%- if item.object_type == 'product' -%}
+            {% render 'product-card', product: item %}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- else -%}
+      <p style="text-align:center; color:var(--color-text-secondary);">{{ 'general.search.no_results' | t }}</p>
+    {%- endif -%}
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Busca Principal",
+  "settings": []
+}
+{% endschema %}

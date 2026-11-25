@@ -1,0 +1,17 @@
+{%- unless template == 'index' or template == 'cart' -%}
+  <nav class="breadcrumbs container" role="navigation" aria-label="breadcrumbs" style="padding-top: 1.25rem; padding-bottom: 0.5rem; font-size: 0.82rem; color: var(--color-text-secondary);">
+    <a href="{{ routes.root_url | default: '/' }}">Início</a>
+    <span aria-hidden="true" style="margin: 0 0.4rem; color: var(--color-accent-red);">/</span>
+    {%- if template contains 'product' -%}
+      {%- if collection.url -%}
+        <a href="{{ collection.url }}">{{ collection.title }}</a>
+        <span aria-hidden="true" style="margin: 0 0.4rem; color: var(--color-accent-red);">/</span>
+      {%- endif -%}
+      <span style="color: var(--color-text-primary); font-weight: 700;">{{ product.title }}</span>
+    {%- elsif template contains 'collection' and collection.handle -%}
+      <span style="color: var(--color-text-primary); font-weight: 700;">{{ collection.title }}</span>
+    {%- else -%}
+      <span style="color: var(--color-text-primary); font-weight: 700;">{{ page_title }}</span>
+    {%- endif -%}
+  </nav>
+{%- endunless -%}

@@ -1,0 +1,106 @@
+{%- comment -%}
+  Snippet: product-card.liquid
+  Renderiza um card de produto nativo da Shopify ou um card configurado para os 3 carros-chefes:
+  - CATRACADA TEST
+  - BLACK DRAGON TEST
+  - CATRACADA TURBO
+{%- endcomment -%}
+
+<article class="product-card">
+  <div class="product-card__badges">
+    <span class="badge badge--red">
+      {% render 'icon', icon: 'bolt' %}
+      {{ badge_text | default: 'ALTA PERFORMANCE' }}
+    </span>
+    <span class="badge badge--dark">10% OFF PIX</span>
+  </div>
+
+  <a href="{{ product.url | default: '#' }}" class="product-card__media" aria-label="{{ product.title | default: fallback_title }}">
+    {%- if product.featured_image != blank -%}
+      <img
+        class="product-card__img"
+        src="{{ product.featured_image | image_url: width: 600 }}"
+        alt="{{ product.featured_image.alt | default: product.title | escape }}"
+        width="400"
+        height="400"
+        loading="lazy"
+      >
+    {%- elsif fallback_image != blank -%}
+      <img
+        class="product-card__img"
+        src="{{ fallback_image | asset_url }}"
+        alt="{{ fallback_title | escape }}"
+        width="400"
+        height="400"
+        loading="lazy"
+      >
+    {%- else -%}
+      <img
+        class="product-card__img"
+        src="{{ 'Catracada_LOGO.png' | asset_url }}"
+        alt="{{ fallback_title | default: 'Catracada' | escape }}"
+        width="400"
+        height="400"
+        loading="lazy"
+      >
+    {%- endif -%}
+  </a>
+
+  <div class="product-card__body">
+    <span class="product-card__category">{{ category_label | default: product.type | default: 'LINHA OFICIAL CATRACADA' }}</span>
+
+    <h3 class="product-card__title">
+      <a href="{{ product.url | default: '#' }}">
+        {{ product.title | default: fallback_title }}
+      </a>
+    </h3>
+
+    <p class="product-card__desc">
+      {{ fallback_desc | default: product.description | strip_html | truncate: 110 }}
+    </p>
+
+    {% render 'price',
+      product: product,
+      fallback_price: fallback_price,
+      fallback_compare: fallback_compare
+    %}
+
+    {%- if product != blank -%}
+      <form
+        method="post"
+        action="{{ routes.cart_add_url | default: '/cart/add' }}"
+        data-ajax-cart-form
+        data-product-title="{{ product.title | escape }}"
+        data-product-price="{{ product.price }}"
+      >
+        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+        <input type="hidden" name="quantity" value="1">
+        <button
+          type="submit"
+          class="btn btn--primary btn--full"
+          {% unless product.available %}disabled{% endunless %}
+        >
+          {% render 'icon', icon: 'cart' %}
+          {%- if product.available -%}
+            {{ 'products.product.add_to_cart' | t }}
+          {%- else -%}
+            {{ 'products.product.sold_out' | t }}
+          {%- endif -%}
+        </button>
+      </form>
+    {%- else -%}
+      <form
+        method="post"
+        action="/cart/add"
+        data-ajax-cart-form
+        data-product-title="{{ fallback_title | escape }}"
+        data-product-price="{{ fallback_price | default: 7990 }}"
+      >
+        <button type="submit" class="btn btn--primary btn--full">
+          {% render 'icon', icon: 'cart' %}
+          COMPRAR AGORA
+        </button>
+      </form>
+    {%- endif -%}
+  </div>
+</article>

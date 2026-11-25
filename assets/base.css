@@ -1,0 +1,224 @@
+/* ==========================================================================
+   CATRACADA / NATURAL ZONE — BASE DESIGN SYSTEM (SHOPIFY OS 2.0)
+   Paleta Oficial: Fundo Azul Escuro (#060B16), Letra Branca (#FFFFFF),
+   Detalhe Vermelho (#E3242B)
+   ========================================================================== */
+
+:root {
+  --color-bg-primary: #060B16;
+  --color-bg-secondary: #0D172A;
+  --color-bg-card: #13203B;
+  --color-bg-card-hover: #18294B;
+  --color-border-subtle: #1E325C;
+  --color-border-red: rgba(227, 36, 43, 0.55);
+
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #CBD5E1;
+  --color-text-muted: #94A3B8;
+
+  --color-accent-red: #E3242B;
+  --color-accent-red-hover: #FF2A32;
+  --color-accent-red-dark: #B8171D;
+  --color-accent-red-glow: rgba(227, 36, 43, 0.38);
+
+  --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --container-max: 1280px;
+  --container-padding: 1.25rem;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-pill: 9999px;
+
+  --shadow-card: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --shadow-red: 0 8px 24px rgba(227, 36, 43, 0.35);
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent-red);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Utilitários de Layout e Tipografia */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.skip-to-content-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 9999;
+  background: var(--color-accent-red);
+  color: var(--color-text-primary);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+}
+
+.skip-to-content-link:focus {
+  top: 1rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2.25rem;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-accent-red);
+  background: rgba(227, 36, 43, 0.12);
+  border: 1px solid rgba(227, 36, 43, 0.35);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.65rem, 3.2vw, 2.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+  line-height: 1.15;
+}
+
+.section-title span,
+.text-accent {
+  color: var(--color-accent-red);
+}
+
+.section-subtitle {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  max-width: 640px;
+  margin: 0.65rem auto 0;
+}
+
+/* Botões Padrão Catracada (Vermelho com Letra Branca) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.9rem 1.65rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, var(--color-accent-red) 0%, var(--color-accent-red-dark) 100%);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-red);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.btn--primary:hover {
+  background: linear-gradient(135deg, var(--color-accent-red-hover) 0%, var(--color-accent-red) 100%);
+  color: var(--color-text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(227, 36, 43, 0.55);
+}
+
+.btn--outline {
+  background: rgba(19, 32, 59, 0.75);
+  color: var(--color-text-primary);
+  border: 1.5px solid var(--color-accent-red);
+}
+
+.btn--outline:hover {
+  background: var(--color-accent-red);
+  color: var(--color-text-primary);
+  transform: translateY(-2px);
+}
+
+.btn--full {
+  width: 100%;
+}

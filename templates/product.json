@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {}
+    },
+    "diferenciais": {
+      "type": "diferenciais",
+      "settings": {}
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "diferenciais",
+    "featured_collection"
+  ]
+}

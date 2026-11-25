@@ -1,0 +1,52 @@
+<section class="main-cart-section container" style="padding: 3rem 1.25rem 4rem;">
+  <div class="section-header">
+    <span class="section-eyebrow">CHECKOUT SEGURO SHOPIFY</span>
+    <h1 class="section-title">SEU <span>CARRINHO</span></h1>
+  </div>
+
+  {%- if cart.item_count > 0 -%}
+    <form action="{{ routes.cart_url | default: '/cart' }}" method="post" novalidate>
+      <div style="display:flex; flex-direction:column; gap:1rem; margin-bottom:2rem;">
+        {%- for item in cart.items -%}
+          <div class="cart-item" style="grid-template-columns: 80px 1fr auto;">
+            {%- if item.image -%}
+              <img class="cart-item__img" src="{{ item.image | image_url: width: 160 }}" alt="{{ item.title | escape }}" style="width:80px; height:80px;">
+            {%- endif -%}
+            <div>
+              <a href="{{ item.url }}" class="cart-item__title">{{ item.product.title }}</a>
+              <p style="font-size:0.82rem; color:var(--color-text-secondary);">Quantidade: {{ item.quantity }}</p>
+            </div>
+            <div class="cart-item__price" style="font-size:1.1rem;">
+              {{ item.final_line_price | money }}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+
+      <div style="background:var(--color-bg-card); border:1px solid var(--color-border-red); border-radius:var(--radius-md); padding:1.5rem; max-width:460px; margin-left:auto;">
+        <div class="cart-drawer__subtotal">
+          <span>SUBTOTAL:</span>
+          <span>{{ cart.total_price | money }}</span>
+        </div>
+        <p class="cart-drawer__pix-hint">
+          No PIX (10% OFF): <strong style="color:var(--color-accent-red);">{{ cart.total_price | times: 90 | divided_by: 100 | money }}</strong> ou em até 3x sem juros.
+        </p>
+        <button type="submit" name="checkout" class="btn btn--primary btn--full">
+          FINALIZAR COMPRA NO CHECKOUT OFICIAL
+        </button>
+      </div>
+    </form>
+  {%- else -%}
+    <div style="text-align:center; padding:3rem 0;">
+      <p style="color:var(--color-text-secondary); margin-bottom:1.5rem;">Seu carrinho está vazio.</p>
+      <a href="{{ routes.root_url | default: '/' }}" class="btn btn--primary">VER PRODUTOS EM DESTAQUE</a>
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Carrinho Principal",
+  "settings": []
+}
+{% endschema %}

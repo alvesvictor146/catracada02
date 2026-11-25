@@ -1,0 +1,13 @@
+<section class="main-404-section container" style="padding: 5rem 1.25rem; text-align: center;">
+  <span class="section-eyebrow">ERRO 404</span>
+  <h1 class="section-title" style="margin-bottom: 1rem;">PÁGINA NÃO <span>ENCONTRADA</span></h1>
+  <p class="section-subtitle" style="margin-bottom: 2rem;">O endereço acessado não existe ou foi movido. Volte para a vitrine principal da Catracada.</p>
+  <a href="{{ routes.root_url | default: '/' }}" class="btn btn--primary">VOLTAR PARA OS PRODUTOS</a>
+</section>
+
+{% schema %}
+{
+  "name": "Página 404",
+  "settings": []
+}
+{% endschema %}

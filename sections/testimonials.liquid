@@ -1,0 +1,19 @@
+<section class="testimonials-section container" style="padding: 3rem 1.25rem;">
+  <div class="section-header">
+    <span class="section-eyebrow">PROVA SOCIAL</span>
+    <h2 class="section-title">AVALIAÇÕES <span>GOOGLE &amp; LOJA 01</span></h2>
+  </div>
+  <div style="text-align:center;">
+    <a href="{{ settings.google_review_link | default: 'https://g.page/r/CbuLKDucytYzEAE/review' }}" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+      {% render 'icon', icon: 'google' %}
+      VER E PUBLICAR AVALIAÇÃO NO GOOGLE
+    </a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Depoimentos Google",
+  "settings": []
+}
+{% endschema %}

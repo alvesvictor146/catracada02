@@ -1,0 +1,76 @@
+{%- comment -%}
+  Section: category-grid.liquid
+  Categorias de NOSSOS PRODUTOS + COMBOS determinadas pelo cliente:
+  - ESTIMULANTES
+  - CREATINAS
+  - PRÉ TREINO
+  - EMAGRECEDORES
+  - TERMOGÊNICOS
+  - QUEDA CAPILAR
+  - COMBOS
+{%- endcomment -%}
+
+<section class="categories-section" aria-label="Categorias de Nossos Produtos">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">NOSSOS PRODUTOS</span>
+      <h2 class="section-title">NAVEGUE POR <span>OBJETIVO</span></h2>
+      <p class="section-subtitle">Encontre rapidamente a linha ideal para sua evolução física, energia e saúde.</p>
+    </div>
+
+    <div class="categories-grid">
+      <a href="{{ routes.collections_url | default: '/collections' }}/estimulantes" class="category-tile">
+        <span class="category-tile__tag">LINHA CATRACADA</span>
+        <h3 class="category-tile__title">ESTIMULANTES</h3>
+        <span class="category-tile__cta">Ver Produtos {% render 'icon', icon: 'chevron-right' %}</span>
+      </a>
+
+      <a href="{{ routes.collections_url | default: '/collections' }}/creatinas" class="category-tile">
+        <span class="category-tile__tag">FORÇA & EXPLOSÃO</span>
+        <h3 class="category-tile__title">CREATINAS</h3>
+        <span class="category-tile__cta">Ver Produtos {% render 'icon', icon: 'chevron-right' %}</span>
+      </a>
+
+      <a href="{{ routes.collections_url | default: '/collections' }}/pre-treino" class="category-tile">
+        <span class="category-tile__tag">DILA POWER & FOCO</span>
+        <h3 class="category-tile__title">PRÉ TREINO</h3>
+        <span class="category-tile__cta">Ver Produtos {% render 'icon', icon: 'chevron-right' %}</span>
+      </a>
+
+      <a href="{{ routes.collections_url | default: '/collections' }}/emagrecedores" class="category-tile">
+        <span class="category-tile__tag">DEFINIÇÃO & MEDIDAS</span>
+        <h3 class="category-tile__title">EMAGRECEDORES</h3>
+        <span class="category-tile__cta">Ver Produtos {% render 'icon', icon: 'chevron-right' %}</span>
+      </a>
+
+      <a href="{{ routes.collections_url | default: '/collections' }}/termogenicos" class="category-tile">
+        <span class="category-tile__tag">METABOLISMO ATIVO</span>
+        <h3 class="category-tile__title">TERMOGÊNICOS</h3>
+        <span class="category-tile__cta">Ver Produtos {% render 'icon', icon: 'chevron-right' %}</span>
+      </a>
+
+      <a href="{{ routes.collections_url | default: '/collections' }}/queda-capilar" class="category-tile">
+        <span class="category-tile__tag">SAÚDE & TRATAMENTO</span>
+        <h3 class="category-tile__title">QUEDA CAPILAR</h3>
+        <span class="category-tile__cta">Ver Produtos {% render 'icon', icon: 'chevron-right' %}</span>
+      </a>
+
+      <a href="{{ routes.collections_url | default: '/collections' }}/combos" class="category-tile category-tile--featured">
+        <span class="category-tile__tag">ECONOMIA MÁXIMA • KITS OFICIAIS</span>
+        <h3 class="category-tile__title">COMBOS PROMOCIONAIS CATRACADA</h3>
+        <span class="category-tile__cta">Aproveitar Descontos nos Kits {% render 'icon', icon: 'chevron-right' %}</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Grade de Categorias",
+  "presets": [
+    {
+      "name": "Categorias Nossos Produtos"
+    }
+  ]
+}
+{% endschema %}

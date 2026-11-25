@@ -1,0 +1,57 @@
+{%- comment -%}
+  Snippet: cart-drawer.liquid
+  Gaveta lateral de carrinho integrada à Shopify Ajax Cart API e ao Checkout Nativo (/checkout)
+{%- endcomment -%}
+
+<div class="cart-drawer-backdrop" data-cart-backdrop></div>
+
+<aside class="cart-drawer" data-cart-drawer aria-hidden="true" aria-label="Carrinho de Compras">
+  <div class="cart-drawer__header">
+    <h2 class="cart-drawer__title">
+      {% render 'icon', icon: 'cart' %}
+      SEU CARRINHO (<span data-cart-count>{{ cart.item_count | default: 0 }}</span>)
+    </h2>
+    <button type="button" class="header-action-btn" data-cart-close aria-label="Fechar carrinho">
+      &times;
+    </button>
+  </div>
+
+  <div class="cart-drawer__items" data-cart-items>
+    {%- if cart.item_count > 0 -%}
+      {%- for item in cart.items -%}
+        <div class="cart-item" data-line-key="{{ item.key }}">
+          {%- if item.image -%}
+            <img class="cart-item__img" src="{{ item.image | image_url: width: 140 }}" alt="{{ item.title | escape }}" loading="lazy">
+          {%- endif -%}
+          <div>
+            <div class="cart-item__title">{{ item.product.title }}</div>
+            <div class="cart-item__price">{{ item.final_line_price | money }}</div>
+            <div class="cart-item__qty">
+              <button type="button" class="cart-qty-btn" onclick="updateCartItemQty('{{ item.key }}', {{ item.quantity | minus: 1 }})">-</button>
+              <span>{{ item.quantity }}</span>
+              <button type="button" class="cart-qty-btn" onclick="updateCartItemQty('{{ item.key }}', {{ item.quantity | plus: 1 }})">+</button>
+            </div>
+          </div>
+          <button type="button" class="cart-qty-btn" aria-label="Remover" onclick="updateCartItemQty('{{ item.key }}', 0)">&times;</button>
+        </div>
+      {%- endfor -%}
+    {%- else -%}
+      <p style="color: var(--color-text-secondary); text-align:center; padding: 2rem 0;">
+        {{ 'sections.cart.empty' | t }}
+      </p>
+    {%- endif -%}
+  </div>
+
+  <div class="cart-drawer__footer">
+    <div class="cart-drawer__subtotal">
+      <span>SUBTOTAL:</span>
+      <span data-cart-subtotal>{{ cart.total_price | default: 0 | money }}</span>
+    </div>
+    <p class="cart-drawer__pix-hint">
+      No PIX (10% OFF): <strong style="color: var(--color-accent-red);" data-cart-pix-total>{{ cart.total_price | default: 0 | times: 90 | divided_by: 100 | money }}</strong> ou em até 3x sem juros.
+    </p>
+    <a href="{{ routes.checkout_url | default: '/checkout' }}" class="btn btn--primary btn--full">
+      {{ 'sections.cart.checkout' | t }}
+    </a>
+  </div>
+</aside>

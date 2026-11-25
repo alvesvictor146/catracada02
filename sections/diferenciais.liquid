@@ -1,0 +1,71 @@
+{%- comment -%}
+  Section: diferenciais.liquid
+  Os 5 Diferenciais Comerciais determinados pelo cliente:
+  1. PARCELAS EM ATÉ 3X SEM JUROS
+  2. 10% OFF NO PIX
+  3. RETIRADA EM LOJA FÍSICA
+  4. ENVIOS EM ATÉ 24H PARA SÃO PAULO E REGIÃO
+  5. ENTREGA GARANTIDA OU O DINHEIRO DE VOLTA * *
+{%- endcomment -%}
+
+<section class="diferenciais-section" aria-label="Diferenciais Catracada e Natural Zone">
+  <div class="container">
+    <div class="diferenciais-grid">
+      <!-- 1. PARCELAS EM ATÉ 3X SEM JUROS -->
+      <div class="diferencial-card">
+        <div class="diferencial-card__icon">
+          {% render 'icon', icon: 'credit-card' %}
+        </div>
+        <h3 class="diferencial-card__title">PARCELAS EM ATÉ 3X SEM JUROS</h3>
+        <p class="diferencial-card__desc">Facilidade no cartão de crédito com checkout 100% seguro.</p>
+      </div>
+
+      <!-- 2. 10% OFF NO PIX -->
+      <div class="diferencial-card">
+        <div class="diferencial-card__icon">
+          {% render 'icon', icon: 'pix' %}
+        </div>
+        <h3 class="diferencial-card__title">10% OFF NO PIX</h3>
+        <p class="diferencial-card__desc">Desconto imediato e aprovação instantânea do seu pedido.</p>
+      </div>
+
+      <!-- 3. RETIRADA EM LOJA FÍSICA -->
+      <div class="diferencial-card">
+        <div class="diferencial-card__icon">
+          {% render 'icon', icon: 'store' %}
+        </div>
+        <h3 class="diferencial-card__title">RETIRADA EM LOJA FÍSICA</h3>
+        <p class="diferencial-card__desc">Compre no site e retire na Loja 01 em São Paulo - SP.</p>
+      </div>
+
+      <!-- 4. ENVIOS EM ATÉ 24H PARA SÃO PAULO E REGIÃO -->
+      <div class="diferencial-card">
+        <div class="diferencial-card__icon">
+          {% render 'icon', icon: 'truck' %}
+        </div>
+        <h3 class="diferencial-card__title">ENVIOS EM ATÉ 24H PARA SÃO PAULO E REGIÃO</h3>
+        <p class="diferencial-card__desc">Logística expressa para você receber com máxima agilidade.</p>
+      </div>
+
+      <!-- 5. ENTREGA GARANTIDA OU O DINHEIRO DE VOLTA * * -->
+      <div class="diferencial-card">
+        <div class="diferencial-card__icon">
+          {% render 'icon', icon: 'shield' %}
+        </div>
+        <h3 class="diferencial-card__title">ENTREGA GARANTIDA OU O DINHEIRO DE VOLTA * *</h3>
+        <p class="diferencial-card__desc">Pedido rastreado do envio até a porta da sua casa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Diferenciais Comerciais",
+  "presets": [
+    {
+      "name": "5 Diferenciais Catracada"
+    }
+  ]
+}
+{% endschema %}
